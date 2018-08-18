@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 
@@ -12,7 +11,6 @@ import { reducers } from './reducers';
 @NgModule({
     imports: [
         CommonModule,
-        HttpClientModule,
         LazyLoadImageModule,
         ProductRoutingModule,
 

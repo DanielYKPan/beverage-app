@@ -20,8 +20,8 @@ export const initialState: State = adapter.getInitialState({
 
 export function reducer( state = initialState, action: ProductActions ): State {
     switch (action.type) {
-        case ProductActionTypes.Load:
-            return adapter.addOne(action.payload, {
+        case ProductActionTypes.LoadListComplete:
+            return adapter.addMany(action.payload, {
                 ...state,
                 selectedProductId: state.selectedProductId
             });

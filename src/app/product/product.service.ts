@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Product } from './model/product';
 import { map } from 'rxjs/operators';
+
+import { Product } from './model/product';
 
 @Injectable({
     providedIn: 'root'
@@ -13,9 +14,11 @@ export class ProductService {
     }
 
     public getProducts(): Observable<Product[]> {
+
+        // simulate a process of fetching data from API
         return this.http.get('/assets/data/products.json')
             .pipe(
-                map((res: Product[]) => res)
+                map(( res: Product[] ) => res)
             );
     }
 }

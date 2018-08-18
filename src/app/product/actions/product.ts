@@ -6,7 +6,7 @@ import { Product } from '../model/product';
 
 export enum ProductActionTypes {
     Select = '[Product] Select',
-    Load = '[Product] Load',
+    LoadListComplete = '[Product] Load',
 }
 
 export class Select implements Action {
@@ -16,13 +16,13 @@ export class Select implements Action {
     }
 }
 
-export class Load implements Action {
-    readonly type = ProductActionTypes.Load;
+export class LoadListComplete implements Action {
+    readonly type = ProductActionTypes.LoadListComplete;
 
-    constructor( public payload: Product ) {
+    constructor( public payload: Product[] ) {
     }
 }
 
 export type ProductActions =
     Select |
-    Load;
+    LoadListComplete;
