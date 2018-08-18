@@ -20,6 +20,8 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "@ngrx/entity": "^6.1.0",
+    "@ngrx/store": "^6.1.0",
     "core-js": "^2.5.4",
     "ng-lazyload-image": "^4.0.0",
     "rxjs": "^6.0.0",

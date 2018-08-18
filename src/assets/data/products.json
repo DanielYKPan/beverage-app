@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "label": {
+      "sub": "Original",
+      "main": "Mtn Dew®"
+    },
+    "name": "mtn-dew",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "7550-mtn-dew.png"
+  },
+  {
+    "id": 2,
+    "label": {
+      "sub": "Diet",
+      "main": "Mtn Dew®"
+    },
+    "name": "diet-mtn-dew",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "7143-diet-mtn-dew.png"
+  },
+  {
+    "id": 3,
+    "label": {
+      "sub": "MTN DEW® KICKSTART™",
+      "main": "Blueberry Pomegranate"
+    },
+    "name": "blueberry-pomegranate",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "29653-02_KS_BlueberryPom.png"
+  },
+  {
+    "id": 4,
+    "label": {
+      "sub": "MTN DEW® KICKSTART™",
+      "main": "Blood Orange"
+    },
+    "name": "blood-orange",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "88610-04_KS_BloodOrange.png"
+  },
+  {
+    "id": 5,
+    "label": {
+      "sub": "MTN DEW® KICKSTART™",
+      "main": "Watermelon"
+    },
+    "name": "watermelon",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "54589-03_KS_Watermelon.png"
+  },
+  {
+    "id": 6,
+    "label": {
+      "sub": "MTN DEW® KICKSTART™",
+      "main": "Pineapple Orange Mango"
+    },
+    "name": "pineapple-orange-mango",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "5015-pineapple-orange-mango.png"
+  },
+  {
+    "id": 7,
+    "label": {
+      "sub": "MTN DEW® KICKSTART™",
+      "main": "Strawberry Kiwi"
+    },
+    "name": "strawberry-kiwi",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "5631-strawberry-kiwi.png"
+  },
+  {
+    "id": 8,
+    "label": {
+      "sub": "MTN DEW® KICKSTART™",
+      "main": "Midnight Grape"
+    },
+    "name": "mtn-dew-kickstart",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "94596-01_KS_MidnightGrape.png"
+  },
+  {
+    "id": 9,
+    "label": {
+      "sub": "MTN DEW® KICKSTART™",
+      "main": "Black Cherry"
+    },
+    "name": "kickstart-black-cherry",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "8130-kickstart-black-cherry.png"
+  },
+  {
+    "id": 10,
+    "label": {
+      "sub": "MTN DEW® KICKSTART™",
+      "main": "Limeade"
+    },
+    "name": "kickstart-limeade",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "1561-kickstart-limeade.png"
+  },
+  {
+    "id": 11,
+    "label": {
+      "sub": "MTN DEW® KICKSTART™",
+      "main": "Orange Citrus"
+    },
+    "name": "kickstart-orange-citrus",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "3492-kickstart-orange-citrus.png"
+  },
+  {
+    "id": 12,
+    "label": {
+      "sub": "MTN DEW® KICKSTART™",
+      "main": "Fruit Punch"
+    },
+    "name": "kickstart-fruit-punch",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "7560-kickstart-fruit-punch.png"
+  },
+  {
+    "id": 13,
+    "label": {
+      "sub": "MTN DEW®",
+      "main": "BLACK LABEL®"
+    },
+    "name": "mtn-dew-black-label",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "84898-blacklabel_product.png"
+  },
+  {
+    "id": 14,
+    "label": {
+      "sub": "MTN DEW®",
+      "main": "Dewshine"
+    },
+    "name": "dew-shine",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "5438-dew-shine.png"
+  },
+  {
+    "id": 15,
+    "label": {
+      "sub": "MTN DEW®",
+      "main": "Baja Blast®"
+    },
+    "name": "baja-blast",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "3078-baja-blast.png"
+  },
+  {
+    "id": 16,
+    "label": {
+      "sub": "MTN DEW®",
+      "main": "Sangrita Blast™"
+    },
+    "name": "sangrita-blast",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "9596-baja-blast-sangrita.png"
+  },
+  {
+    "id": 17,
+    "label": {
+      "sub": "MTN DEW®",
+      "main": "Game Fuel®"
+    },
+    "name": "game-fuel",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "2844-game-fuel.png"
+  },
+  {
+    "id": 18,
+    "label": {
+      "sub": "MTN DEW®",
+      "main": "Code Red®"
+    },
+    "name": "mtn-dew-code-red",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "1199-mtn-dew-code-red.png"
+  },
+  {
+    "id": 19,
+    "label": {
+      "sub": "Diet Mtn Dew®",
+      "main": "Code Red®"
+    },
+    "name": "iet-mtn-dew-code-red",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "1727-diet-mtn-dew-code-red.png"
+  },
+  {
+    "id": 20,
+    "label": {
+      "sub": "MTN DEW®",
+      "main": "Live Wire™"
+    },
+    "name": "mtn-dew-live-wire",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "4165-mtn-dew-live-wire.png"
+  },
+  {
+    "id": 21,
+    "label": {
+      "sub": "MTN DEW®",
+      "main": "Voltage™"
+    },
+    "name": "mtn-dew-voltage",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "8415-mtn-dew-voltage.png"
+  },
+  {
+    "id": 22,
+    "label": {
+      "sub": "MTN DEW®",
+      "main": "White Out™"
+    },
+    "name": "mtn-dew-white-out",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "9520-mtn-dew-white-out.png"
+  },
+  {
+    "id": 23,
+    "label": {
+      "sub": "Glass Bottle",
+      "main": "Mtn Dew®"
+    },
+    "name": "mtn-dew-glass-bottles",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "3718-mtn-dew-glass-bottles.png"
+  },
+  {
+    "id": 24,
+    "label": {
+      "sub": "Mtn Dew®",
+      "main": "Throwback™"
+    },
+    "name": "throwback",
+    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "img": "7266-throwback.png"
+  }
+]
