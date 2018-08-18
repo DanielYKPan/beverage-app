@@ -1,5 +1,14 @@
+@import "variables";
+
 .layout-wrapper {
   position: relative;
   width: 100vw;
   height: 100vh;
+}
+
+.layout-main {
+  padding-top: $header-height;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: scroll;
 }
