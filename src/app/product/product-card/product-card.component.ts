@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Product } from '../model/product';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-product-card',
@@ -11,10 +12,15 @@ export class ProductCardComponent implements OnInit {
 
     @Input() product: Product;
 
-    constructor() {
+    constructor( private router: Router ) {
     }
 
     ngOnInit() {
     }
 
+    public handleClickOnProductAnchor( event: any ): void {
+
+        this.router.navigate(['../details/', this.product.id]);
+        event.preventDefault();
+    }
 }

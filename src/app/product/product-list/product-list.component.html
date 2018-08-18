@@ -1,10 +1,16 @@
-<div class="product-list-wrapper">
+<div class="product-list-wrapper" #wrapper>
     <div class="product-list-title">
         <h2>MTN DEW</h2>
         <h1>LINEUP</h1>
     </div>
 
-    <ul class="product-list">
+    <ul class="product-list"
+        [ngStyle]="{
+            'transform': 'translateX('+ listMoveDistance +'px)'
+        }"
+        (slide)="handleSlideOnList($event)"
+        (slidestart)="handleSlideStartOnList($event)"
+        (slideend)="handleSlideEndOnList($event)" #list>
         <li class="product-list-item" *ngFor="let item of list$ | async as list; index as i;">
             <app-product-card [product]="item"></app-product-card>
         </li>

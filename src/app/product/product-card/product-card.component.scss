@@ -4,6 +4,7 @@
   text-decoration: none;
   color: #FFFFFF;
   user-select: none;
+  -webkit-user-drag: none;
 }
 
 .product-img {
@@ -11,4 +12,5 @@
   width: 100%;
   height: auto;
   user-select: none;
+  -webkit-user-drag: none;
 }
