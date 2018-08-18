@@ -1,3 +1,12 @@
-<p>
-  product-list works!
-</p>
+<div class="product-list-wrapper">
+    <div class="product-list-title">
+        <h2>MTN DEW</h2>
+        <h1>LINEUP</h1>
+    </div>
+
+    <ul class="product-list">
+        <li class="product-list-item" *ngFor="let item of list$ | async as list; index as i;">
+            <app-product-card [product]="item"></app-product-card>
+        </li>
+    </ul>
+</div>

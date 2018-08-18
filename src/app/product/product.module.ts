@@ -7,6 +7,7 @@ import { ProductRoutingModule } from './product-routing.module';
 import { ProductComponent } from './product.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { reducers } from './reducers';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 @NgModule({
     imports: [
@@ -16,7 +17,7 @@ import { reducers } from './reducers';
 
         StoreModule.forFeature('products', reducers),
     ],
-    declarations: [ProductComponent, ProductListComponent]
+    declarations: [ProductComponent, ProductListComponent, ProductCardComponent]
 })
 export class ProductModule {
 }
