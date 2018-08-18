@@ -7,8 +7,10 @@
 }
 
 .layout-main {
+  position: relative;
   padding-top: $header-height;
   height: 100%;
   box-sizing: border-box;
   overflow-y: scroll;
+  background-color: #1d1d1f;
 }

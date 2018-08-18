@@ -3,12 +3,14 @@
         <img src="/assets/img/dew-logo.svg">
     </a>
     <ul class="app-header-nav">
-        <li class="app-header-nav-item" tabindex="0">
-            <a class="app-header-nav-anchor active" tabindex="-1">Home</a>
+        <li class="app-header-nav-item">
+            <a routerLink="/" routerLinkActive="active"
+               [routerLinkActiveOptions]="{exact: true}"
+               class="app-header-nav-anchor">Home</a>
         </li>
 
-        <li class="app-header-nav-item" tabindex="0">
-            <a class="app-header-nav-anchor" tabindex="-1">Products</a>
+        <li class="app-header-nav-item">
+            <a routerLink="/product" routerLinkActive="active" class="app-header-nav-anchor">Products</a>
         </li>
     </ul>
 </header>

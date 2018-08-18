@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
+    {path: 'product', loadChildren: 'src/app/product/product.module#ProductModule'},
 ];
 
 @NgModule({
