@@ -1,4 +1,5 @@
 import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { AnimationEvent } from '@angular/animations';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
@@ -16,6 +17,9 @@ import { productAnimations } from '../animations';
         productAnimations.listFadeInOut,
         productAnimations.accordion,
         productAnimations.moveProduct,
+        productAnimations.scaleProduct,
+        productAnimations.scaleRotateImg,
+        productAnimations.scaleShadow,
     ],
 })
 export class ProductListComponent implements OnInit, AfterViewInit {
@@ -44,7 +48,8 @@ export class ProductListComponent implements OnInit, AfterViewInit {
     }
 
     constructor( private store: Store<fromProductRoot.State>,
-                 private cdRef: ChangeDetectorRef ) {
+                 private cdRef: ChangeDetectorRef,
+                 private router: Router ) {
     }
 
     public ngOnInit() {
@@ -90,7 +95,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
         }
     }
 
-    public handleMouseEnterOnCard( card: any, index: number, event: any ): void {
+    public handleMouseEnterOnCard( index: number, event: any ): void {
         if (this.isFadingInOut) {
             return;
         }
@@ -100,7 +105,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
         event.preventDefault();
     }
 
-    public handleMouseLeaveOnCard( card: any, index: number, event: any ): void {
+    public handleMouseLeaveOnCard( index: number, event: any ): void {
         if (this.isFadingInOut) {
             return;
         }
@@ -128,5 +133,9 @@ export class ProductListComponent implements OnInit, AfterViewInit {
             }
         }
         return 'still';
+    }
+
+    public handleClickOnProductAnchor( product: Product ): void {
+        this.router.navigate(['/product/details/', product.id]);
     }
 }

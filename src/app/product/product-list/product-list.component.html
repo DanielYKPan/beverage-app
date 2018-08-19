@@ -23,11 +23,26 @@
             [@moveProduct]="getMoveProductStat(i)"
             [class.product-list-item-left]="i < hoverProductIndex"
             [class.product-list-item-right]="i > hoverProductIndex">
-            <app-product-card [product]="item"
-                              [scaled]="listCanAccordion && i === hoverProductIndex"
-                              (mouseenter)="handleMouseEnterOnCard(card, i, $event)"
-                              (mouseleave)="handleMouseLeaveOnCard(card, i, $event)"
-                              #card="productCard"></app-product-card>
+            <a class="product-anchor"
+               [class.scaled]="listCanAccordion && i === hoverProductIndex"
+               [@scaleProduct]="listCanAccordion && i === hoverProductIndex"
+               (tap)="handleClickOnProductAnchor(item)"
+               (mouseenter)="handleMouseEnterOnCard(i, $event)"
+               (mouseleave)="handleMouseLeaveOnCard(i, $event)">
+                <img class="product-img"
+                     [@scaleRotateImg]="listCanAccordion && i === hoverProductIndex"
+                     [src]="'/assets/img/products/' + item.img">
+                <div class="product-cta">
+                    <div class="product-cta-label">details</div>
+                    <div class="product-cta-stroke"></div>
+                </div>
+                <div class="product-shadow" [@scaleShadow]="listCanAccordion && i === hoverProductIndex"></div>
+                <div class="product-label">
+                    <div class="product-label-sub">{{item.label.sub}}</div>
+                    <div class="product-label-main">{{item.label.main}}</div>
+                    <div class="product-label-stroke"></div>
+                </div>
+            </a>
         </li>
     </ul>
 </div>
