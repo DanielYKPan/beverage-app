@@ -35,7 +35,7 @@ export class ProductCardComponent implements OnInit {
 
     public handleClickOnProductAnchor( event: any ): void {
 
-        this.router.navigate(['../details/', this.product.id]);
+        this.router.navigate(['/product/details/', this.product.id]);
         event.preventDefault();
     }
 }

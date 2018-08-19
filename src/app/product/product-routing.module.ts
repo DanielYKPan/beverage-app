@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductComponent } from './product.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductListExistGuard } from './guards/product-list-exist.guard';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 const routes: Routes = [
     {
@@ -11,7 +12,8 @@ const routes: Routes = [
         canActivateChild: [ProductListExistGuard],
         children: [
             {path: '', redirectTo: 'list', pathMatch: 'full'},
-            {path: 'list', component: ProductListComponent}
+            {path: 'list', component: ProductListComponent},
+            {path: 'details/:id', component: ProductDetailsComponent},
         ]
     }
 ];

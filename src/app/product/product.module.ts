@@ -8,6 +8,7 @@ import { ProductComponent } from './product.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { reducers } from './reducers';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
     imports: [
@@ -17,7 +18,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
 
         StoreModule.forFeature('products', reducers),
     ],
-    declarations: [ProductComponent, ProductListComponent, ProductCardComponent]
+    declarations: [ProductComponent, ProductListComponent, ProductCardComponent, ProductDetailsComponent]
 })
 export class ProductModule {
 }
