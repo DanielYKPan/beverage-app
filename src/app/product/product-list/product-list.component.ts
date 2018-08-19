@@ -1,15 +1,22 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AnimationEvent } from '@angular/animations';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
 import * as fromProductRoot from '../reducers';
 import { Product } from '../model/product';
+import { productAnimations } from '../animations';
 
 @Component({
     selector: 'app-product-list',
     templateUrl: './product-list.component.html',
     styleUrls: ['./product-list.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    animations: [
+        productAnimations.listFadeInOut,
+        productAnimations.accordion,
+        productAnimations.moveProduct,
+    ],
 })
 export class ProductListComponent implements OnInit, AfterViewInit {
 
@@ -19,7 +26,10 @@ export class ProductListComponent implements OnInit, AfterViewInit {
     public list$: Observable<Product[]>;
 
     public listMoveDistance = 0;
-    public isDragging = false;
+    public hoverProductIndex: number = null;
+    public isDragging = false; // whether the list is being dragged
+    public isExpanding = false; // whether the product is scaling
+    public isFadingInOut = false; // whether the list is fading in or out
 
     private wrapperWidth: number;
     private listWidth: number;
@@ -29,7 +39,12 @@ export class ProductListComponent implements OnInit, AfterViewInit {
     private max = 0; // the max that the list could move left
     private min = 0; // the min that the list could move left;
 
-    constructor( private store: Store<fromProductRoot.State> ) {
+    get listCanAccordion(): boolean {
+        return this.isExpanding && !this.isFadingInOut && !this.isDragging;
+    }
+
+    constructor( private store: Store<fromProductRoot.State>,
+                 private cdRef: ChangeDetectorRef ) {
     }
 
     public ngOnInit() {
@@ -73,5 +88,45 @@ export class ProductListComponent implements OnInit, AfterViewInit {
         if (slideDistance > 0 && listMoveDistance <= this.min) {
             this.listMoveDistance = listMoveDistance;
         }
+    }
+
+    public handleMouseEnterOnCard( card: any, index: number, event: any ): void {
+        if (this.isFadingInOut) {
+            return;
+        }
+        this.hoverProductIndex = index;
+        this.isExpanding = true;
+        this.cdRef.markForCheck();
+        event.preventDefault();
+    }
+
+    public handleMouseLeaveOnCard( card: any, index: number, event: any ): void {
+        if (this.isFadingInOut) {
+            return;
+        }
+        this.isExpanding = false;
+        this.cdRef.markForCheck();
+        event.preventDefault();
+    }
+
+    public fadeInOutStarted( event: AnimationEvent ): void {
+        this.isFadingInOut = true;
+        this.cdRef.markForCheck();
+    }
+
+    public fadeInOutDone( event: AnimationEvent ): void {
+        this.isFadingInOut = false;
+        this.cdRef.markForCheck();
+    }
+
+    public getMoveProductStat( index: number ): string {
+        if (this.listCanAccordion) {
+            if (index > this.hoverProductIndex) {
+                return 'right';
+            } else if (index < this.hoverProductIndex) {
+                return 'left';
+            }
+        }
+        return 'still';
     }
 }

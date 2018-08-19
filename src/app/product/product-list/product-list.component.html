@@ -10,9 +10,22 @@
         }"
         (slide)="handleSlideOnList($event)"
         (slidestart)="handleSlideStartOnList($event)"
-        (slideend)="handleSlideEndOnList($event)" #list>
-        <li class="product-list-item" *ngFor="let item of list$ | async as list; index as i;">
-            <app-product-card [product]="item"></app-product-card>
+        (slideend)="handleSlideEndOnList($event)"
+        [@accordion]="listCanAccordion"
+        [@listFadeInOut]="true"
+        (@listFadeInOut.start)="fadeInOutStarted($event)"
+        (@listFadeInOut.done)="fadeInOutDone($event)"
+        #list>
+        <li *ngFor="let item of list$ | async as list; index as i;"
+            class="product-list-item"
+            [@moveProduct]="getMoveProductStat(i)"
+            [class.product-list-item-left]="i < hoverProductIndex"
+            [class.product-list-item-right]="i > hoverProductIndex">
+            <app-product-card [product]="item"
+                              [scaled]="listCanAccordion && i === hoverProductIndex"
+                              (mouseenter)="handleMouseEnterOnCard(card, i, $event)"
+                              (mouseleave)="handleMouseLeaveOnCard(card, i, $event)"
+                              #card="productCard"></app-product-card>
         </li>
     </ul>
 </div>
