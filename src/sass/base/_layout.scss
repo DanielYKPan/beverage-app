@@ -1,4 +1,5 @@
 @import "variables";
+@import "breakPoints";
 
 .layout-wrapper {
   position: relative;
@@ -8,9 +9,15 @@
 
 .layout-main {
   position: relative;
-  padding-top: $header-height;
+  padding: 0 0 $header-height;
   height: 100%;
   box-sizing: border-box;
   overflow-y: scroll;
   background-color: #1d1d1f;
+}
+
+@media #{$small-up} {
+  .layout-main {
+    padding: $header-height 0 0;
+  }
 }

@@ -1,10 +1,11 @@
 @import "../../../sass/base/variables";
+@import "../../../sass/base/breakPoints";
 
 .app-header {
   display: flex;
   justify-content: center;
   position: fixed;
-  top: 0;
+  bottom: 0;
   z-index: 1000;
   width: 100%;
   height: $header-height;
@@ -14,9 +15,10 @@
 .app-logo {
   display: block;
   width: 115px;
-  position: absolute;
+  position: fixed;
   top: 1rem;
   left: .8rem;
+  z-index: 1500;
 
   img {
     width: 100%;
@@ -72,5 +74,12 @@
     &:not(:-moz-focusring):focus > .app-header-nav-anchor {
       box-shadow: none;
     }
+  }
+}
+
+@media #{$small-up} {
+  .app-header {
+    top: 0;
+    bottom: auto;
   }
 }
