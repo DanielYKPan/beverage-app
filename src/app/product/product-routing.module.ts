@@ -12,8 +12,8 @@ const routes: Routes = [
         canActivateChild: [ProductListExistGuard],
         children: [
             {path: '', redirectTo: 'list', pathMatch: 'full'},
-            {path: 'list', component: ProductListComponent},
-            {path: 'details/:id', component: ProductDetailsComponent},
+            {path: 'list', component: ProductListComponent, data: {animation: 'list'}},
+            {path: 'details/:id', component: ProductDetailsComponent, data: {animation: 'details'}},
         ]
     }
 ];

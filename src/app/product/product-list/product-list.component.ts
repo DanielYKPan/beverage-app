@@ -96,9 +96,6 @@ export class ProductListComponent implements OnInit, AfterViewInit {
     }
 
     public handleMouseEnterOnCard( index: number, event: any ): void {
-        if (this.isFadingInOut) {
-            return;
-        }
         this.hoverProductIndex = index;
         this.isExpanding = true;
         this.cdRef.markForCheck();
@@ -106,9 +103,6 @@ export class ProductListComponent implements OnInit, AfterViewInit {
     }
 
     public handleMouseLeaveOnCard( index: number, event: any ): void {
-        if (this.isFadingInOut) {
-            return;
-        }
         this.isExpanding = false;
         this.cdRef.markForCheck();
         event.preventDefault();
@@ -136,6 +130,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
     }
 
     public handleClickOnProductAnchor( product: Product ): void {
+        this.isExpanding = false;
         this.router.navigate(['/product/details/', product.id]);
     }
 }

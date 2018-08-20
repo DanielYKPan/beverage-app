@@ -16,6 +16,7 @@ import {
 } from '@angular/animations';
 
 export const productAnimations: {
+    readonly routerAnimations: AnimationTriggerMetadata;
     readonly listFadeInOut: AnimationTriggerMetadata;
     readonly accordion: AnimationTriggerMetadata;
     readonly moveProduct: AnimationTriggerMetadata;
@@ -23,6 +24,27 @@ export const productAnimations: {
     readonly scaleRotateImg: AnimationTriggerMetadata;
     readonly scaleShadow: AnimationTriggerMetadata;
 } = {
+    routerAnimations: trigger('routerAnimations', [
+        transition('list => details', [
+            query(':enter, :leave', style({position: 'absolute', top: 0, left: 0, right: 0}), {optional: true}),
+            query(':leave', style({zIndex: 2, opacity: 1}), {optional: true}),
+            query(':enter', style({opacity: 0}), {optional: true}),
+
+            query(':leave',
+                group([
+                    query('.product-list-item', [
+                        stagger(30, [
+                            animate(200, style({opacity: 0, transform: 'translateY(-100px)'}))
+                        ])
+                    ]),
+                    animateChild()
+                ]), {optional: true}),
+            query(':enter', group([
+                animate('500ms cubic-bezier(.35,0,.25,1)', style({opacity: 1})),
+                animateChild()
+            ]), {optional: true})
+        ])
+    ]),
     listFadeInOut: trigger('listFadeInOut', [
         transition(':enter', [
             query('.product-list-item', [style({transform: 'translate(300px, 100px)', opacity: 0})]),

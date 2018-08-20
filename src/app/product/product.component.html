@@ -1,1 +1,4 @@
-<router-outlet></router-outlet>
+<div class="product-main"
+     [@routerAnimations]="prepareRouteTransition(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+</div>
