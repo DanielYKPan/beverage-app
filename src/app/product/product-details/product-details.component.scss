@@ -1,0 +1,150 @@
+.product-details-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: #171719;
+}
+
+.product-details-btn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  .cta-round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    box-shadow: rgba(112, 113, 114, 0.4) 0 0 0 2px inset;
+    color: #707172;
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 200ms ease-out;
+  }
+
+  &:hover {
+    .cta-round {
+      box-shadow: none;
+      background-color: #3cd52e;
+      color: #fff;
+    }
+  }
+
+  .close-label {
+    margin-left: 5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #171719;
+
+    .sub {
+      font-size: .8rem;
+    }
+
+    .main {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.product-details-close {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 15%;
+  min-width: 8.5rem;
+  order: 1;
+}
+
+.product-details-img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 30%;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  order: 2;
+
+  img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    transform: rotate(-8deg);
+  }
+}
+
+.product-details-content {
+  width: 40%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  order: 3;
+
+  h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    font-weight: 800;
+  }
+
+  h1 {
+    margin: 0 0 1.5rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    font-weight: 800;
+  }
+
+  p {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin: 0 0 1.5rem;
+  }
+
+  a {
+    display: inline-flex;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+
+    .cta-round {
+      font-size: 1rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: .5rem;
+    }
+  }
+}
+
+.product-details-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 15%;
+  order: 4;
+
+  .nav-anchor {
+    display: flex;
+    align-items: center;
+    width: 6.25rem;
+    height: 4rem;
+    margin-bottom: 4px;
+    color: #FFFFFF;
+    background-color: #171719;
+    text-decoration: none;
+    outline: none;
+    padding-left: 1rem;
+    cursor: pointer;
+    transition: background-color 200ms ease-out;
+
+    &:hover {
+      background-color: #3cd52e;
+    }
+  }
+}

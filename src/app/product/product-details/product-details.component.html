@@ -1,2 +1,35 @@
 <div class="product-background"
      [lazyLoad]="'/assets/img/texture-light.jpg'"></div>
+
+<ng-container *ngIf="product$ | async as product">
+    <div class="product-details-wrapper">
+        <div class="product-details-img">
+            <img [src]="'/assets/img/products/' + product.img"/>
+        </div>
+        <div class="product-details-content">
+            <h3>{{product.label.sub}}</h3>
+            <h1>{{product.label.main}}</h1>
+            <p>{{product.description}}</p>
+            <a class="product-details-btn">Nutrition Info <div class="cta-round"><i class="fas fa-chevron-right fa-xs"></i></div></a>
+        </div>
+
+        <a class="product-details-close product-details-btn" routerLink="/product/list">
+            <div class="cta-round">
+                <i class="fas fa-times fa-2x"></i>
+            </div>
+            <div class="close-label">
+                <div class="sub">MTN Dew <sup>®</sup></div>
+                <div class="main">LINEUP</div>
+            </div>
+        </a>
+
+        <div class="product-details-nav">
+            <a class="nav-anchor">
+                <i class="fas fa-chevron-right fa-lg"></i>
+            </a>
+            <a class="nav-anchor">
+                <i class="fas fa-chevron-left fa-lg"></i>
+            </a>
+        </div>
+    </div>
+</ng-container>
