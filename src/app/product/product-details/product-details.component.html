@@ -4,7 +4,13 @@
 <ng-container *ngIf="product$ | async as product">
     <div class="product-details-wrapper">
         <div class="product-details-img">
+            <a class="product-details-img-anchor">
+                <i class="fas fa-chevron-left fa-7x"></i>
+            </a>
             <img [src]="'/assets/img/products/' + product.img"/>
+            <a class="product-details-img-anchor">
+                <i class="fas fa-chevron-right fa-7x"></i>
+            </a>
         </div>
         <div class="product-details-content">
             <h3>{{product.label.sub}}</h3>
