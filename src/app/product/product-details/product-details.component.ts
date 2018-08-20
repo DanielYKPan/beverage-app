@@ -7,12 +7,16 @@ import { ActivatedRoute } from '@angular/router';
 import * as fromProductRoot from '../reducers';
 import * as productAction from '../actions/product';
 import { Product } from '../model/product';
+import { productAnimations } from '../animations';
 
 @Component({
     selector: 'app-product-details',
     templateUrl: './product-details.component.html',
     styleUrls: ['./product-details.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    animations: [
+        productAnimations.detailsFadeIn,
+    ]
 })
 export class ProductDetailsComponent implements OnInit, OnDestroy {
 

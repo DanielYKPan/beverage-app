@@ -2,21 +2,26 @@
      [lazyLoad]="'/assets/img/texture-light.jpg'"></div>
 
 <ng-container *ngIf="product$ | async as product">
-    <div class="product-details-wrapper">
-        <div class="product-details-img">
+    <div class="product-details-wrapper"
+         [@detailsFadeIn]="true">
+        <div class="product-details-img-wrapper">
             <a class="product-details-img-anchor">
                 <i class="fas fa-chevron-left fa-7x"></i>
             </a>
-            <img [src]="'/assets/img/products/' + product.img"/>
+            <div class="product-details-img">
+                <img [src]="'/assets/img/products/' + product.img"/>
+            </div>
             <a class="product-details-img-anchor">
                 <i class="fas fa-chevron-right fa-7x"></i>
             </a>
         </div>
-        <div class="product-details-content">
-            <h3>{{product.label.sub}}</h3>
-            <h1>{{product.label.main}}</h1>
-            <p>{{product.description}}</p>
-            <a class="product-details-btn">Nutrition Info <div class="cta-round"><i class="fas fa-chevron-right fa-xs"></i></div></a>
+        <div class="product-details-content-wrapper">
+            <h3 class="product-details-content">{{product.label.sub}}</h3>
+            <h1 class="product-details-content">{{product.label.main}}</h1>
+            <p class="product-details-content">{{product.description}}</p>
+            <a class="product-details-content product-details-btn">Nutrition Info
+                <div class="cta-round"><i class="fas fa-chevron-right fa-xs"></i></div>
+            </a>
         </div>
 
         <a class="product-details-close product-details-btn" routerLink="/product/list">
