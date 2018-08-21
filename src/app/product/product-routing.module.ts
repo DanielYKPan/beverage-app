@@ -4,7 +4,6 @@ import { ProductComponent } from './product.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductListExistGuard } from './guards/product-list-exist.guard';
 import { ProductDetailsComponent } from './product-details/product-details.component';
-import { ProductDetailsContentComponent } from './product-details-content/product-details-content.component';
 
 const routes: Routes = [
     {
@@ -16,13 +15,7 @@ const routes: Routes = [
             {path: '', redirectTo: 'list', pathMatch: 'full'},
             {path: 'list', component: ProductListComponent, data: {animation: 'list'}},
             {
-                path: 'details',
-                component: ProductDetailsComponent,
-                data: {animation: 'details'},
-                children: [
-                    {path: '', redirectTo: '/product/list', pathMatch: 'full'},
-                    {path: ':id', component: ProductDetailsContentComponent}
-                ]
+                path: 'details/:id', component: ProductDetailsComponent, data: {animation: 'details'},
             },
         ]
     }

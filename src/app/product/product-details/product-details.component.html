@@ -3,7 +3,21 @@
 <div class="product-details-wrapper"
      [@detailsFadeIn]="true">
 
-    <router-outlet #outlet="outlet"></router-outlet>
+    <ng-container *ngIf="selected$ | async as selected">
+        <div class="product-details-content">
+            <div class="product-details-img-wrapper">
+                <img class="product-details-img" [src]="'/assets/img/products/' + selected.img"/>
+            </div>
+            <div class="product-details-description-wrapper">
+                <h3 class="product-details-description">{{selected.label.sub}}</h3>
+                <h1 class="product-details-description">{{selected.label.main}}</h1>
+                <p class="product-details-description">{{selected.description}}</p>
+                <a class="product-details-description product-details-btn">Nutrition Info
+                    <div class="cta-round"><i class="fas fa-chevron-right fa-xs"></i></div>
+                </a>
+            </div>
+        </div>
+    </ng-container>
 
     <ng-container *ngIf="nav$ | async as nav">
         <a class="product-details-close product-details-btn" routerLink="/product/list">
@@ -17,10 +31,10 @@
         </a>
 
         <div class="product-details-nav">
-            <a class="nav-anchor left" [routerLink]="['/product/details', nav.prevId]">
+            <a class="nav-anchor left" [routerLink]="['/product/details', nav.nextId]">
                 <i class="fas fa-chevron-left"></i>
             </a>
-            <a class="nav-anchor right" [routerLink]="['/product/details', nav.nextId]">
+            <a class="nav-anchor right" [routerLink]="['/product/details', nav.prevId]">
                 <i class="fas fa-chevron-right"></i>
             </a>
         </div>
