@@ -1,12 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { select, Store } from '@ngrx/store';
-import { ActivatedRoute } from '@angular/router';
 
 import * as fromProductRoot from '../reducers';
-import * as productAction from '../actions/product';
-import { Product } from '../model/product';
 import { productAnimations } from '../animations';
 
 @Component({
@@ -20,25 +16,15 @@ import { productAnimations } from '../animations';
 })
 export class ProductDetailsComponent implements OnInit, OnDestroy {
 
-    public product$: Observable<Product>;
+    public nav$: Observable<{ nextId: number, prevId: number }>;
 
-    private actionsSubscription: Subscription;
-
-    constructor( private route: ActivatedRoute,
-                 private store: Store<fromProductRoot.State> ) {
-        this.actionsSubscription = this.route.params
-            .pipe(map(params => {
-                return new productAction.Select(+params.id);
-            }))
-            .subscribe(this.store);
+    constructor( private store: Store<fromProductRoot.State> ) {
     }
 
     public ngOnInit() {
-        this.product$ = this.store.pipe(select(fromProductRoot.getSelectedProduct));
+        this.nav$ = this.store.pipe(select(fromProductRoot.getSelectedProductNav));
     }
 
     public ngOnDestroy(): void {
-        this.actionsSubscription.unsubscribe();
     }
-
 }

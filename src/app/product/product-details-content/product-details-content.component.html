@@ -1,0 +1,13 @@
+<ng-container *ngIf="selected$ | async as selected">
+    <div class="product-details-img-wrapper">
+        <img class="product-details-img" [src]="'/assets/img/products/' + selected.img"/>
+    </div>
+    <div class="product-details-description-wrapper">
+        <h3 class="product-details-description">{{selected.label.sub}}</h3>
+        <h1 class="product-details-description">{{selected.label.main}}</h1>
+        <p class="product-details-description">{{selected.description}}</p>
+        <a class="product-details-description product-details-btn">Nutrition Info
+            <div class="cta-round"><i class="fas fa-chevron-right fa-xs"></i></div>
+        </a>
+    </div>
+</ng-container>

@@ -1,29 +1,11 @@
 <div class="product-background"
      [lazyLoad]="'/assets/img/texture-light.jpg'"></div>
+<div class="product-details-wrapper"
+     [@detailsFadeIn]="true">
 
-<ng-container *ngIf="product$ | async as product">
-    <div class="product-details-wrapper"
-         [@detailsFadeIn]="true">
-        <div class="product-details-img-wrapper">
-            <a class="product-details-img-anchor">
-                <i class="fas fa-chevron-left fa-7x"></i>
-            </a>
-            <div class="product-details-img">
-                <img [src]="'/assets/img/products/' + product.img"/>
-            </div>
-            <a class="product-details-img-anchor">
-                <i class="fas fa-chevron-right fa-7x"></i>
-            </a>
-        </div>
-        <div class="product-details-content-wrapper">
-            <h3 class="product-details-content">{{product.label.sub}}</h3>
-            <h1 class="product-details-content">{{product.label.main}}</h1>
-            <p class="product-details-content">{{product.description}}</p>
-            <a class="product-details-content product-details-btn">Nutrition Info
-                <div class="cta-round"><i class="fas fa-chevron-right fa-xs"></i></div>
-            </a>
-        </div>
+    <router-outlet #outlet="outlet"></router-outlet>
 
+    <ng-container *ngIf="nav$ | async as nav">
         <a class="product-details-close product-details-btn" routerLink="/product/list">
             <div class="cta-round">
                 <i class="fas fa-times fa-2x"></i>
@@ -35,12 +17,12 @@
         </a>
 
         <div class="product-details-nav">
-            <a class="nav-anchor">
-                <i class="fas fa-chevron-right fa-lg"></i>
+            <a class="nav-anchor left" [routerLink]="['/product/details', nav.prevId]">
+                <i class="fas fa-chevron-left"></i>
             </a>
-            <a class="nav-anchor">
-                <i class="fas fa-chevron-left fa-lg"></i>
+            <a class="nav-anchor right" [routerLink]="['/product/details', nav.nextId]">
+                <i class="fas fa-chevron-right"></i>
             </a>
         </div>
-    </div>
-</ng-container>
+    </ng-container>
+</div>

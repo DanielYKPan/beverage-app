@@ -52,8 +52,8 @@ export const productAnimations: {
 
             query(':leave', [
                 group([
-                    query('.product-details-img', animate(300, style({opacity: 0, transform: 'translateY(300px)'}))),
-                    query('.product-details-content-wrapper', animate(300, style({opacity: 0}))),
+                    query('.product-details-img-wrapper', animate(300, style({opacity: 0, transform: 'translateY(300px)'}))),
+                    query('.product-details-description-wrapper', animate(300, style({opacity: 0}))),
                     query('.product-details-close', animate(300, style({opacity: 0}))),
                     query('.product-details-nav a', stagger(50, [
                         animate(250, style({transform: 'translateX(100%)'}))
@@ -180,13 +180,13 @@ export const productAnimations: {
 
     detailsFadeIn: trigger('detailsFadeIn', [
         transition(':enter', [
-            query('.product-details-img', style({opacity: 0, transform: 'translateY(-300px)'})),
-            query('.product-details-content, .product-details-close', style({opacity: 0, transform: 'translateX(-100px)'})),
-            query('a.product-details-content', style({opacity: 0, transform: 'translateX(100px)'})),
+            query('.product-details-img-wrapper', style({opacity: 0, transform: 'translateY(-300px)'})),
+            query('.product-details-description, .product-details-close', style({opacity: 0, transform: 'translateX(-100px)'})),
+            query('a.product-details-description', style({opacity: 0, transform: 'translateX(100px)'})),
             query('.product-details-nav a', style({transform: 'translateX(100%)'})),
             group([
-                query('.product-details-img, .product-details-close', animate('300ms 400ms', style('*'))),
-                query('.product-details-content, .product-details-nav a', [
+                query('.product-details-img-wrapper, .product-details-close', animate('300ms 400ms', style('*'))),
+                query('.product-details-description, .product-details-nav a', [
                     stagger(50, [
                         animate('200ms 400ms', style('*'))
                     ])

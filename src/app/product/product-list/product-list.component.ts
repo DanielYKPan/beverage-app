@@ -130,6 +130,9 @@ export class ProductListComponent implements OnInit, AfterViewInit {
     }
 
     public handleClickOnProductAnchor( product: Product ): void {
+        if (this.isFadingInOut) {
+            return;
+        }
         this.isExpanding = false;
         this.router.navigate(['/product/details/', product.id]);
     }

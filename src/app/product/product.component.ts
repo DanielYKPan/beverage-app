@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { productAnimations } from './animations';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
     selector: 'app-product',
@@ -18,7 +19,7 @@ export class ProductComponent implements OnInit {
     ngOnInit() {
     }
 
-    public prepareRouteTransition( outlet ) {
+    public prepareRouteTransition( outlet: RouterOutlet ) {
         const animation = outlet.activatedRouteData['animation'];
         return animation || null;
     }

@@ -23,7 +23,7 @@ export const getProductsState = createFeatureSelector<ProductsState>('products')
 // Products Entity State
 export const getProductEntityState = createSelector(
     getProductsState,
-    (state: ProductsState) => state.products
+    ( state: ProductsState ) => state.products
 );
 
 export const {
@@ -43,5 +43,23 @@ export const getSelectedProduct = createSelector(
     getSelectedProductId,
     ( products, selectedIds ) => {
         return selectedIds && products[selectedIds];
+    }
+);
+
+export const getSelectedProductNav = createSelector(
+    getProductIds,
+    getSelectedProductId,
+    ( ids: number[], selectedId: number ) => {
+        if (ids) {
+            const productIndex = ids.indexOf(selectedId);
+            const nextIndex = productIndex + 1 >= ids.length ? 0 : productIndex + 1;
+            const prevIndex = productIndex - 1 <= 0 ? ids.length - 1 : productIndex - 1;
+            return {
+                nextId: ids[nextIndex],
+                prevId: ids[prevIndex]
+            };
+        }
+
+        return null;
     }
 );

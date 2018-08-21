@@ -6,8 +6,9 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { ProductRoutingModule } from './product-routing.module';
 import { ProductComponent } from './product.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { reducers } from './reducers';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductDetailsContentComponent } from './product-details-content/product-details-content.component';
+import { reducers } from './reducers';
 
 @NgModule({
     imports: [
@@ -17,7 +18,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 
         StoreModule.forFeature('products', reducers),
     ],
-    declarations: [ProductComponent, ProductListComponent, ProductDetailsComponent]
+    declarations: [ProductComponent, ProductListComponent, ProductDetailsComponent, ProductDetailsContentComponent]
 })
 export class ProductModule {
 }
