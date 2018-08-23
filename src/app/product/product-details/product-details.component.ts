@@ -17,7 +17,6 @@ import * as animationAction from '../actions/animation';
     styleUrls: ['./product-details.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     animations: [
-        productAnimations.detailsFadeIn,
         productAnimations.contentFadeInOut,
     ]
 })

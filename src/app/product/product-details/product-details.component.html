@@ -1,7 +1,6 @@
 <div class="product-background"
      [lazyLoad]="'/assets/img/texture-light.jpg'"></div>
-<div class="product-details-wrapper"
-     [@detailsFadeIn]="true">
+<div class="product-details-wrapper">
 
     <ng-container *ngIf="product$ | async as product">
         <div class="product-details-content"

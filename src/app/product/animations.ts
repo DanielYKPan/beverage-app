@@ -23,8 +23,6 @@ export const productAnimations: {
     readonly scaleProduct: AnimationTriggerMetadata;
     readonly scaleRotateImg: AnimationTriggerMetadata;
     readonly scaleShadow: AnimationTriggerMetadata;
-    readonly detailsFadeIn: AnimationTriggerMetadata;
-
     readonly contentFadeInOut: AnimationTriggerMetadata;
 } = {
     routerAnimations: trigger('routerAnimations', [
@@ -42,9 +40,19 @@ export const productAnimations: {
                 animate(100, style({opacity: 0}))
             ], {optional: true}),
             query(':enter', group([
+                query('.product-details-img-wrapper', style({opacity: 0, transform: 'translateY(-300px)'})),
+                query('.product-details-description, .product-details-close', style({opacity: 0, transform: 'translateX(-100px)'})),
+                query('a.product-details-description', style({opacity: 0, transform: 'translateX(100px)'})),
+                query('.product-details-nav a', style({transform: 'translateX(100%)'})),
                 animate('250ms cubic-bezier(.35,0,.25,1)', style({opacity: 1})),
-                query('@detailsFadeIn', animateChild({delay: -200})),
-                animateChild()
+                group([
+                    query('.product-details-img-wrapper, .product-details-close', animate('300ms 400ms', style('*'))),
+                    query('.product-details-description, .product-details-nav a', [
+                        stagger(50, [
+                            animate('200ms 400ms', style('*'))
+                        ])
+                    ])
+                ])
             ]), {optional: true})
         ]),
         transition('details => list', [
@@ -178,23 +186,6 @@ export const productAnimations: {
         state('1', style({width: '200%', transform: 'translate(50px, 50px)'})),
         state('0', style({width: '100%', transform: 'translate(0)'})),
         transition('0 <=> 1', animate(200)),
-    ]),
-
-    detailsFadeIn: trigger('detailsFadeIn', [
-        transition(':enter', [
-            query('.product-details-img-wrapper', style({opacity: 0, transform: 'translateY(-300px)'})),
-            query('.product-details-description, .product-details-close', style({opacity: 0, transform: 'translateX(-100px)'})),
-            query('a.product-details-description', style({opacity: 0, transform: 'translateX(100px)'})),
-            query('.product-details-nav a', style({transform: 'translateX(100%)'})),
-            group([
-                query('.product-details-img-wrapper, .product-details-close', animate('300ms 400ms', style('*'))),
-                query('.product-details-description, .product-details-nav a', [
-                    stagger(50, [
-                        animate('200ms 400ms', style('*'))
-                    ])
-                ])
-            ])
-        ])
     ]),
 
     contentFadeInOut: trigger('contentFadeInOut', [
