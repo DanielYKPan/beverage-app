@@ -12,7 +12,7 @@
   box-sizing: border-box;
 }
 
-/deep/ .product-details-btn {
+.product-details-btn {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -72,6 +72,14 @@
   flex-wrap: wrap;
   width: 100%;
   order: 2;
+
+  &.product-details-content-hide {
+    .product-details-img-wrapper,
+    .product-details-description-wrapper {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
 }
 
 .product-details-img-wrapper {

@@ -24,6 +24,8 @@ export const productAnimations: {
     readonly scaleRotateImg: AnimationTriggerMetadata;
     readonly scaleShadow: AnimationTriggerMetadata;
     readonly detailsFadeIn: AnimationTriggerMetadata;
+
+    readonly contentFadeInOut: AnimationTriggerMetadata;
 } = {
     routerAnimations: trigger('routerAnimations', [
         transition('list => details', [
@@ -194,4 +196,37 @@ export const productAnimations: {
             ])
         ])
     ]),
+
+    contentFadeInOut: trigger('contentFadeInOut', [
+        transition('0 => 1', [
+            query('.product-details-img-wrapper', style({opacity: 0, transform: 'translateX({{ offsetEnter }}px)', visibility: 'hidden'})),
+            query('.product-details-description-wrapper', style({opacity: 0, visibility: 'hidden'})),
+            group([
+                query('.product-details-img-wrapper', animate('500ms 100ms cubic-bezier(.35,0,.25,1)', style({
+                    opacity: 1,
+                    transform: 'translateX(0px)',
+                    visibility: 'visible'
+                }))),
+                query('.product-details-description-wrapper', animate('300ms 400ms cubic-bezier(.35,0,.25,1)', style({
+                    opacity: 1,
+                    visibility: 'visible'
+                }))),
+            ])
+        ], {params: {offsetEnter: 0}}),
+        transition('1 => 0', [
+            query('.product-details-img-wrapper', style({opacity: 1, transform: 'translateX(0px)', visibility: 'visible'})),
+            query('.product-details-description-wrapper', style({opacity: 1, visibility: 'visible'})),
+            group([
+                query('.product-details-img-wrapper', animate('500ms 300ms cubic-bezier(.35,0,.25,1)', style({
+                    opacity: 0,
+                    transform: 'translateX({{ offsetLeave }}px)',
+                    visibility: 'hidden'
+                }))),
+                query('.product-details-description-wrapper', animate('300ms cubic-bezier(.35,0,.25,1)', style({
+                    opacity: 0,
+                    visibility: 'hidden'
+                }))),
+            ])
+        ], {params: {offsetLeave: 0}})
+    ])
 };

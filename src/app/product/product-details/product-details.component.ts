@@ -1,13 +1,15 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AnimationEvent } from '@angular/animations';
 import { select, Store } from '@ngrx/store';
-
-import * as fromProductRoot from '../reducers';
-import { productAnimations } from '../animations';
 import { map } from 'rxjs/operators';
-import * as productAction from '../actions/product';
+import { Observable, Subscription } from 'rxjs';
+
 import { Product } from '../model/product';
-import { ActivatedRoute } from '@angular/router';
+import { productAnimations } from '../animations';
+import * as fromProductRoot from '../reducers';
+import * as productAction from '../actions/product';
+import * as animationAction from '../actions/animation';
 
 @Component({
     selector: 'app-product-details',
@@ -16,31 +18,57 @@ import { ActivatedRoute } from '@angular/router';
     changeDetection: ChangeDetectionStrategy.OnPush,
     animations: [
         productAnimations.detailsFadeIn,
+        productAnimations.contentFadeInOut,
     ]
 })
 export class ProductDetailsComponent implements OnInit, OnDestroy {
 
-    public nav$: Observable<{ nextId: number, prevId: number }>;
+    public product$: Observable<{ nextId: number, prevId: number, selected: Product }>;
 
-    public selected$: Observable<Product>;
+    public animation$: Observable<boolean>;
+
+    public offset$: Observable<{ offsetLeave: number, offsetEnter: number }>;
+
+    private nextId: number;
 
     private actionsSubscription: Subscription;
 
     constructor( private route: ActivatedRoute,
+                 private router: Router,
                  private store: Store<fromProductRoot.State> ) {
         this.actionsSubscription = this.route.params
             .pipe(map(params => {
-                return new productAction.Select(+params.id);
+                return {
+                    select: new productAction.Select(+params.id),
+                    animation: new animationAction.SetAnimationState(true),
+                };
             }))
-            .subscribe(this.store);
+            .subscribe(( actions ) => {
+                this.store.dispatch(actions.select);
+                this.store.dispatch(actions.animation);
+            });
     }
 
     public ngOnInit() {
-        this.nav$ = this.store.pipe(select(fromProductRoot.getSelectedProductNav));
-        this.selected$ = this.store.pipe(select(fromProductRoot.getSelectedProduct));
+        this.product$ = this.store.pipe(select(fromProductRoot.getSelectedProduct));
+        this.animation$ = this.store.pipe(select(fromProductRoot.getProductAnimationAnimationState));
+        this.offset$ = this.store.pipe(select(fromProductRoot.getProductAnimationOffset));
     }
 
     public ngOnDestroy(): void {
         this.actionsSubscription.unsubscribe();
+    }
+
+    public handleClickOnNav( nextId: number, dir: 'left' | 'right', event: any ): void {
+        this.nextId = nextId;
+        const action = dir === 'left' ? new animationAction.MoveLeft() : new animationAction.MoveRight();
+        this.store.dispatch(action);
+        event.preventDefault();
+    }
+
+    public handleContentFadeInOutDone( event: AnimationEvent ): void {
+        if (event.fromState && !event.toState) {
+            this.router.navigate(['/product/details', this.nextId]);
+        }
     }
 }

@@ -3,23 +3,24 @@
 <div class="product-details-wrapper"
      [@detailsFadeIn]="true">
 
-    <ng-container *ngIf="selected$ | async as selected">
-        <div class="product-details-content">
+    <ng-container *ngIf="product$ | async as product">
+        <div class="product-details-content"
+             [class.product-details-content-hide]="!(animation$ | async)"
+             [@contentFadeInOut]="{value: animation$ | async, params: offset$ | async}"
+             (@contentFadeInOut.done)="handleContentFadeInOutDone($event)">
             <div class="product-details-img-wrapper">
-                <img class="product-details-img" [src]="'/assets/img/products/' + selected.img"/>
+                <img class="product-details-img" [src]="'/assets/img/products/' + product.selected.img"/>
             </div>
             <div class="product-details-description-wrapper">
-                <h3 class="product-details-description">{{selected.label.sub}}</h3>
-                <h1 class="product-details-description">{{selected.label.main}}</h1>
-                <p class="product-details-description">{{selected.description}}</p>
+                <h3 class="product-details-description">{{product.selected.label.sub}}</h3>
+                <h1 class="product-details-description">{{product.selected.label.main}}</h1>
+                <p class="product-details-description">{{product.selected.description}}</p>
                 <a class="product-details-description product-details-btn">Nutrition Info
                     <div class="cta-round"><i class="fas fa-chevron-right fa-xs"></i></div>
                 </a>
             </div>
         </div>
-    </ng-container>
 
-    <ng-container *ngIf="nav$ | async as nav">
         <a class="product-details-close product-details-btn" routerLink="/product/list">
             <div class="cta-round">
                 <i class="fas fa-times fa-2x"></i>
@@ -31,10 +32,10 @@
         </a>
 
         <div class="product-details-nav">
-            <a class="nav-anchor left" [routerLink]="['/product/details', nav.nextId]">
+            <a class="nav-anchor left" (click)="handleClickOnNav(product.nextId, 'left', $event)">
                 <i class="fas fa-chevron-left"></i>
             </a>
-            <a class="nav-anchor right" [routerLink]="['/product/details', nav.prevId]">
+            <a class="nav-anchor right" (click)="handleClickOnNav(product.prevId, 'right', $event)">
                 <i class="fas fa-chevron-right"></i>
             </a>
         </div>
