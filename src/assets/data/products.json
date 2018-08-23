@@ -2,72 +2,72 @@
   {
     "id": 1,
     "label": {
-      "sub": "Original",
+      "sub": "ORIGINAL",
       "main": "Mtn Dew®"
     },
     "name": "mtn-dew",
     "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "7550-mtn-dew.png"
+    "img": "21892-grew-dew-product.png"
   },
   {
     "id": 2,
     "label": {
-      "sub": "Diet",
+      "sub": "DIET",
       "main": "Mtn Dew®"
     },
     "name": "diet-mtn-dew",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "7143-diet-mtn-dew.png"
+    "description": "All the great, exhilarating taste of MTN DEW® with less calories. Also available caffeine free.",
+    "img": "89833-grew-dew-diet-product.png"
   },
   {
     "id": 3,
     "label": {
-      "sub": "MTN DEW® KICKSTART™",
-      "main": "Blueberry Pomegranate"
+      "sub": "MTN DEW® ICE™",
+      "main": "ICE™"
     },
-    "name": "blueberry-pomegranate",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "29653-02_KS_BlueberryPom.png"
+    "name": "ice-mtn-dew",
+    "description": "A clear, refreshing, lemon lime DEW®.",
+    "img": "95559-mtn-dew-ice.png"
   },
   {
     "id": 4,
     "label": {
       "sub": "MTN DEW® KICKSTART™",
-      "main": "Blood Orange"
+      "main": "ORIGINAL"
     },
-    "name": "blood-orange",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "88610-04_KS_BloodOrange.png"
+    "name": "kickstart-original",
+    "description": "MTN DEW® KICKSTART™ is returning to its roots. This NEW line of MTN DEW® KICKSTART™ offers the bold taste of original DEW® flavor that you know and love.",
+    "img": "11549-kickstart-original.png"
   },
   {
     "id": 5,
     "label": {
       "sub": "MTN DEW® KICKSTART™",
-      "main": "Watermelon"
+      "main": "ULTRA"
     },
-    "name": "watermelon",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "54589-03_KS_Watermelon.png"
+    "name": "kickstart-ultra",
+    "description": "MTN DEW® KICKSTART™ is returning to its roots. This NEW line of MTN DEW® KICKSTART™ offers the bold taste of original DEW® flavor with no added sugar.",
+    "img": "95047-kickstart-ultra.png"
   },
   {
     "id": 6,
     "label": {
       "sub": "MTN DEW® KICKSTART™",
-      "main": "Pineapple Orange Mango"
+      "main": "ORANGE CITRUS"
     },
-    "name": "pineapple-orange-mango",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "5015-pineapple-orange-mango.png"
+    "name": "kickstart-orange-citrus",
+    "description": "MTN DEW® KICKSTART™ in energizing Orange Citrus. The perfect mix of DEW®, real fruit juice and just the right amount of kick.",
+    "img": "3492-kickstart-orange-citrus.png"
   },
   {
     "id": 7,
     "label": {
       "sub": "MTN DEW® KICKSTART™",
-      "main": "Strawberry Kiwi"
+      "main": "BLACK CHERRY"
     },
-    "name": "strawberry-kiwi",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "5631-strawberry-kiwi.png"
+    "name": "kickstart-black-cherry",
+    "description": "The perfect mix of DEW® and fruit juice, plus electrolytes (for taste) and just the right amount of kick to get things going.",
+    "img": "8130-kickstart-black-cherry.png"
   },
   {
     "id": 8,
@@ -75,168 +75,168 @@
       "sub": "MTN DEW® KICKSTART™",
       "main": "Midnight Grape"
     },
-    "name": "mtn-dew-kickstart",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
+    "name": "kickstart-midnight-grape",
+    "description": "When the sun goes down, you want to turn up. Now MTN DEW® KICKSTART™ comes in refreshing midnight grape flavor. Its combination of DEW®, juice and caffeine means that when the day ends, you’re just getting started.",
     "img": "94596-01_KS_MidnightGrape.png"
   },
   {
     "id": 9,
     "label": {
       "sub": "MTN DEW® KICKSTART™",
-      "main": "Black Cherry"
+      "main": "FRUIT PUNCH"
     },
-    "name": "kickstart-black-cherry",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "8130-kickstart-black-cherry.png"
+    "name": "kickstart-fruit-punch",
+    "description": "MTN DEW® KICKSTART™ in energizing Fruit Punch. The perfect mix of DEW®, real fruit juice and just the right amount of kick.",
+    "img": "7560-kickstart-fruit-punch.png"
   },
   {
     "id": 10,
     "label": {
       "sub": "MTN DEW® KICKSTART™",
-      "main": "Limeade"
+      "main": "MANGO LIME"
     },
-    "name": "kickstart-limeade",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "1561-kickstart-limeade.png"
+    "name": "kickstart-mango-lime",
+    "description": "New MTN DEW® KICKSTART™ Mango Lime flavor blends the great taste of DEW with refreshing fruit juice and caffeine to charge your day.",
+    "img": "33109-mango-lime-products.png"
   },
   {
     "id": 11,
     "label": {
       "sub": "MTN DEW® KICKSTART™",
-      "main": "Orange Citrus"
+      "main": "PINEAPPLE ORANGE MANGO"
     },
-    "name": "kickstart-orange-citrus",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "3492-kickstart-orange-citrus.png"
+    "name": "kickstart-pineapple-orange-mango",
+    "description": "When it’s time to refuel, grab MTN DEW® KICKSTART™ Pineapple Orange Mango. We mixed the refreshing taste of MOUNTAIN DEW® with real fruit juice, coconut water and just the right amount of kick for a sweet, delicious rush when you need it most.",
+    "img": "5015-pineapple-orange-mango.png"
   },
   {
     "id": 12,
     "label": {
       "sub": "MTN DEW® KICKSTART™",
-      "main": "Fruit Punch"
+      "main": "BLUEBERRY POMEGRANATE"
     },
-    "name": "kickstart-fruit-punch",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "7560-kickstart-fruit-punch.png"
+    "name": "kickstart-blueberry-pom",
+    "description": "Experience a mouth-watering blend of blueberry pomegranate flavor, antioxidants, vitamins C + E and the perfect amount of carbonation to pump you up for whatever’s coming next.",
+    "img": "29653-02_KS_BlueberryPom.png"
   },
   {
     "id": 13,
     "label": {
-      "sub": "MTN DEW®",
-      "main": "BLACK LABEL®"
+      "sub": "MTN DEW® KICKSTART™",
+      "main": "RASPBERRY CITRUS"
     },
-    "name": "mtn-dew-black-label",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "84898-blacklabel_product.png"
+    "name": "kickstart-raspberry-citrus",
+    "description": "MTN DEW® KICKSTART™ Raspberry Citrus flavor blends the taste of DEW with fruit juice, coconut water and caffeine for a great tasting way to recharge.",
+    "img": "79239-raspberry-citrus-products.png"
   },
   {
     "id": 14,
     "label": {
-      "sub": "MTN DEW®",
-      "main": "Dewshine"
+      "sub": "MTN DEW® KICKSTART™",
+      "main": "BLOOD ORANGE"
     },
-    "name": "dew-shine",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "5438-dew-shine.png"
+    "name": "kickstart-blood-orange",
+    "description": "Experience a mouth-watering burst of blood orange flavor, antioxidants, vitamins C + E and the perfect amount of carbonation to pump you up for whatever’s coming next.",
+    "img": "88610-04_KS_BloodOrange.png"
   },
   {
     "id": 15,
     "label": {
-      "sub": "MTN DEW®",
-      "main": "Baja Blast®"
+      "sub": "MTN DEW® KICKSTART™",
+      "main": "WATERMELON"
     },
-    "name": "baja-blast",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "3078-baja-blast.png"
+    "name": "kickstart-watermelon",
+    "description": "Refuel with refreshing MTN DEW® KICKSTART™ in watermelon flavor. Made with real fruit juice and DEW®, it’s a great-tasting kick just when you need it most.",
+    "img": "54589-03_KS_Watermelon.png"
   },
   {
     "id": 16,
     "label": {
       "sub": "MTN DEW®",
-      "main": "Sangrita Blast™"
+      "main": "BLACK LABEL®"
     },
-    "name": "sangrita-blast",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "9596-baja-blast-sangrita.png"
+    "name": "mtn-black-label",
+    "description": "Introducing MTN DEW® BLACK LABEL®, crafted with dark berry flavor, real sugar, and herbal bitters.",
+    "img": "40713-Black Label_refreshed.png"
   },
   {
     "id": 17,
     "label": {
       "sub": "MTN DEW®",
-      "main": "Game Fuel®"
+      "main": "WHITE LABEL™"
     },
-    "name": "game-fuel",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "2844-game-fuel.png"
+    "name": "mtn-white-label",
+    "description": "Introducing MTN DEW WHITE LABEL™. DEW® made with tropical flavors and infused with citrus bitters that are deliciously refreshing.",
+    "img": "93366-white-label.png"
   },
   {
     "id": 18,
     "label": {
       "sub": "MTN DEW®",
-      "main": "Code Red®"
+      "main": "PITCH BLACK®"
     },
-    "name": "mtn-dew-code-red",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "1199-mtn-dew-code-red.png"
+    "name": "mtn-pitch-black",
+    "description": "The bold flavor of DEW® with a twist of citrus and dark fruit flavor.",
+    "img": "86457-pitch-black.png"
   },
   {
     "id": 19,
     "label": {
-      "sub": "Diet Mtn Dew®",
-      "main": "Code Red®"
+      "sub": "Mtn Dew®",
+      "main": "LIVE WIRE™"
     },
-    "name": "iet-mtn-dew-code-red",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "1727-diet-mtn-dew-code-red.png"
+    "name": "mtn-dew-live-wire",
+    "description": "The exhilarating taste of DEW® sparked with orange flavor. Give your taste buds a jolt.",
+    "img": "4165-mtn-dew-live-wire.png"
   },
   {
     "id": 20,
     "label": {
       "sub": "MTN DEW®",
-      "main": "Live Wire™"
+      "main": "VOLTAGE™"
     },
-    "name": "mtn-dew-live-wire",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "4165-mtn-dew-live-wire.png"
+    "name": "mtn-dew-voltage",
+    "description": "The exhilarating taste of DEW® charged with ginseng and raspberry citrus flavor. Lightning in a bottle.",
+    "img": "8415-mtn-dew-voltage.png"
   },
   {
     "id": 21,
     "label": {
       "sub": "MTN DEW®",
-      "main": "Voltage™"
+      "main": "WHITE OUT™"
     },
-    "name": "mtn-dew-voltage",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "8415-mtn-dew-voltage.png"
+    "name": "mtn-dew-white-out",
+    "description": "The exhilarating taste of DEW® with a blast of smooth citrus flavor. Built by DEW fans, for DEW fans.",
+    "img": "9520-mtn-dew-white-out.png"
   },
   {
     "id": 22,
     "label": {
       "sub": "MTN DEW®",
-      "main": "White Out™"
+      "main": "CODE OUT™"
     },
-    "name": "mtn-dew-white-out",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "9520-mtn-dew-white-out.png"
+    "name": "mtn-dew-code-out",
+    "description": "The exhilarating taste of DEW® with a rush of cherry flavor. It’ll have you seeing red.",
+    "img": "1199-mtn-dew-code-red.png"
   },
   {
     "id": 23,
     "label": {
-      "sub": "Glass Bottle",
-      "main": "Mtn Dew®"
+      "sub": "DIET MTN DEW®",
+      "main": "CODE OUT®"
     },
-    "name": "mtn-dew-glass-bottles",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "3718-mtn-dew-glass-bottles.png"
+    "name": "mtn-dew-diet-code-out",
+    "description": "The great taste and cherry rush of MTN DEW® CODE RED® with less calories.",
+    "img": "1727-diet-mtn-dew-code-red.png"
   },
   {
     "id": 24,
     "label": {
-      "sub": "Mtn Dew®",
-      "main": "Throwback™"
+      "sub": "GLASS BOTTLE",
+      "main": "Mtn Dew®"
     },
-    "name": "throwback",
-    "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "7266-throwback.png"
+    "name": "mtn-dew-glass-bottles",
+    "description": "Introducing the new MTN DEW® long-neck glass bottle. Real sugar. Real cool.",
+    "img": "3718-mtn-dew-glass-bottles.png"
   }
 ]
