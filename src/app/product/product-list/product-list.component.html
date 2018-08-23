@@ -1,6 +1,10 @@
 <div class="product-background"
      [lazyLoad]="'/assets/img/texture-dark.jpg'"></div>
-<div class="product-list-wrapper" #wrapper>
+<div class="product-list-wrapper"
+     [class.is-dragging]="isDragging"
+     (slide)="handleSlideOnList($event)"
+     (slidestart)="handleSlideStartOnList($event)"
+     (slideend)="handleSlideEndOnList($event)" #wrapper>
     <div class="product-list-title">
         <h2>MTN DEW</h2>
         <h1>LINEUP</h1>
@@ -10,9 +14,6 @@
         [ngStyle]="{
             'transform': 'translateX('+ listMoveDistance +'px)'
         }"
-        (slide)="handleSlideOnList($event)"
-        (slidestart)="handleSlideStartOnList($event)"
-        (slideend)="handleSlideEndOnList($event)"
         [@accordion]="listCanAccordion"
         #list>
         <li *ngFor="let item of list$ | async as list; index as i;"

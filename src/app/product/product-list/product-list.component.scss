@@ -8,6 +8,16 @@
   width: 100%;
   min-height: calc(100vh - #{$header-height});
   overflow-x: hidden;
+  user-select: none;
+  cursor: url("/assets/img/cursors/grabbable.cur") 8 8, default;
+
+  &.is-dragging {
+    cursor: url("/assets/img/cursors/grabbing.cur") 8 8, default;
+
+    .product-list {
+      cursor: inherit;
+    }
+  }
 }
 
 .product-list-title {
