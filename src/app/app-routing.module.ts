@@ -8,8 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-    {path: '', component: HomeComponent},
-    {path: 'product', loadChildren: 'src/app/product/product.module#ProductModule'},
+    {path: '', component: HomeComponent, data: {animation: 'home'}},
+    {path: 'product', loadChildren: 'src/app/product/product.module#ProductModule', data: {animation: 'product'}},
 ];
 
 @NgModule({

@@ -14,9 +14,6 @@
         (slidestart)="handleSlideStartOnList($event)"
         (slideend)="handleSlideEndOnList($event)"
         [@accordion]="listCanAccordion"
-        [@listFadeInOut]="true"
-        (@listFadeInOut.start)="fadeInOutStarted($event)"
-        (@listFadeInOut.done)="fadeInOutDone($event)"
         #list>
         <li *ngFor="let item of list$ | async as list; index as i;"
             class="product-list-item"

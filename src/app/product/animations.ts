@@ -15,35 +15,28 @@ import {
     trigger
 } from '@angular/animations';
 
-export const detailsFadeIn = [
-    query('.product-details-img-wrapper', style({opacity: 0, transform: 'translateY(-300px)'})),
-    query('.product-details-description, .product-details-close', style({opacity: 0, transform: 'translateX(-100px)'})),
-    query('a.product-details-description', style({opacity: 0, transform: 'translateX(100px)'})),
-    query('.product-details-nav a', style({transform: 'translateX(100%)'})),
+export const detailsFadeOut = [
     group([
-        query('.product-details-img-wrapper, .product-details-close', animate('300ms 200ms', style('*'))),
-        query('.product-details-description, .product-details-nav a', [
-            stagger(50, [
-                animate('200ms 200ms', style('*'))
-            ])
-        ])
+        query('.product-details-img-wrapper', animate(300, style({opacity: 0, transform: 'translateY(300px)'})), {optional: true}),
+        query('.product-details-description-wrapper', animate(300, style({opacity: 0})), {optional: true}),
+        query('.product-details-close', animate(300, style({opacity: 0})), {optional: true}),
+        query('.product-details-nav a', stagger(50, [
+            animate(250, style({transform: 'translateX(100%)'}))
+        ]), {optional: true})
     ])
 ];
 
-export const detailsFadeOut = [
-    group([
-        query('.product-details-img-wrapper', animate(300, style({opacity: 0, transform: 'translateY(300px)'}))),
-        query('.product-details-description-wrapper', animate(300, style({opacity: 0}))),
-        query('.product-details-close', animate(300, style({opacity: 0}))),
-        query('.product-details-nav a', stagger(50, [
-            animate(250, style({transform: 'translateX(100%)'}))
-        ]))
-    ])
+export const listFadeOut = [
+    query('.product-shadow', style({visibility: 'hidden', opacity: 0}), {optional: true}),
+    query('.product-list-item', [
+        stagger(30, [
+            animate(150, style({opacity: 0, transform: 'translateY(-100px)'}))
+        ])
+    ], {optional: true}),
 ];
 
 export const productAnimations: {
     readonly routerAnimations: AnimationTriggerMetadata;
-    readonly listFadeInOut: AnimationTriggerMetadata;
     readonly accordion: AnimationTriggerMetadata;
     readonly moveProduct: AnimationTriggerMetadata;
     readonly scaleProduct: AnimationTriggerMetadata;
@@ -52,25 +45,35 @@ export const productAnimations: {
     readonly contentFadeInOut: AnimationTriggerMetadata;
 } = {
     routerAnimations: trigger('routerAnimations', [
-        transition('list => details', [
+        transition('* => details', [
             query(':enter, :leave', style({position: 'absolute', top: 0, left: 0, right: 0}), {optional: true}),
             query(':leave', style({zIndex: 2, opacity: 1}), {optional: true}),
             query(':enter', style({opacity: 0}), {optional: true}),
 
             query(':leave', [
-                query('.product-list-item', [
-                    stagger(30, [
-                        animate(150, style({opacity: 0, transform: 'translateY(-100px)'}))
-                    ])
-                ]),
+                ...listFadeOut,
                 animate(100, style({opacity: 0}))
             ], {optional: true}),
             query(':enter', group([
+                query('.product-details-img-wrapper', style({opacity: 0, transform: 'translateY(-300px)'})),
+                query('.product-details-description, .product-details-close', style({
+                    opacity: 0,
+                    transform: 'translateX(-100px)'
+                })),
+                query('a.product-details-description', style({opacity: 0, transform: 'translateX(100px)'})),
+                query('.product-details-nav a', style({transform: 'translateX(100%)'})),
                 animate('250ms cubic-bezier(.35,0,.25,1)', style({opacity: 1})),
-                ...detailsFadeIn
+                group([
+                    query('.product-details-img-wrapper, .product-details-close', animate('300ms 200ms', style('*'))),
+                    query('.product-details-description, .product-details-nav a', [
+                        stagger(50, [
+                            animate('200ms 200ms', style('*'))
+                        ])
+                    ])
+                ])
             ]), {optional: true})
         ]),
-        transition('details => list', [
+        transition('* => list', [
             query(':enter, :leave', style({position: 'absolute', top: 0, left: 0, right: 0}), {optional: true}),
             query(':leave', style({zIndex: 2, opacity: 1}), {optional: true}),
             query(':enter', style({opacity: 0}), {optional: true}),
@@ -80,24 +83,18 @@ export const productAnimations: {
                 animate('200ms 100ms', style({opacity: 0}))
             ], {optional: true}),
             query(':enter', [
+                query('.product-list-item', [style({transform: 'translate(300px, 100px)', opacity: 0})]),
+                query('.product-shadow', style({visibility: 'hidden', opacity: 0})),
                 animate('250ms cubic-bezier(.35,0,.25,1)', style({opacity: 1})),
-                query('@listFadeInOut', animateChild({delay: -100}))
-            ], {optional: true})
-        ])
-    ]),
-
-    listFadeInOut: trigger('listFadeInOut', [
-        transition(':enter', [
-            query('.product-list-item', [style({transform: 'translate(300px, 100px)', opacity: 0})]),
-            query('.product-shadow', style({visibility: 'hidden', opacity: 0})),
-            query('.product-list-item', [
-                stagger(50, [
-                    animate(400, style('*'))
+                query('.product-list-item', [
+                    stagger(50, [
+                        animate(400, style('*'))
+                    ])
+                ], {delay: -100}),
+                query('.product-shadow', [
+                    animate(200, style({visibility: 'visible', opacity: 1}))
                 ])
-            ]),
-            query('.product-shadow', [
-                animate(200, style({visibility: 'visible', opacity: 1}))
-            ]),
+            ], {optional: true})
         ])
     ]),
 

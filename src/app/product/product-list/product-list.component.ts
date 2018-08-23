@@ -14,7 +14,6 @@ import { productAnimations } from '../animations';
     styleUrls: ['./product-list.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     animations: [
-        productAnimations.listFadeInOut,
         productAnimations.accordion,
         productAnimations.moveProduct,
         productAnimations.scaleProduct,
@@ -106,16 +105,6 @@ export class ProductListComponent implements OnInit, AfterViewInit {
         this.isExpanding = false;
         this.cdRef.markForCheck();
         event.preventDefault();
-    }
-
-    public fadeInOutStarted( event: AnimationEvent ): void {
-        this.isFadingInOut = true;
-        this.cdRef.markForCheck();
-    }
-
-    public fadeInOutDone( event: AnimationEvent ): void {
-        this.isFadingInOut = false;
-        this.cdRef.markForCheck();
     }
 
     public getMoveProductStat( index: number ): string {

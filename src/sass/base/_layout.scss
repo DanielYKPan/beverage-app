@@ -9,7 +9,7 @@
 
 .layout-main {
   position: relative;
-  padding: 0 0 $header-height;
+  margin: 0 0 $header-height;
   height: 100%;
   box-sizing: border-box;
   overflow-y: scroll;
@@ -18,6 +18,6 @@
 
 @media #{$small-up} {
   .layout-main {
-    padding: $header-height 0 0;
+    margin: $header-height 0 0;
   }
 }
