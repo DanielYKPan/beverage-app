@@ -15,6 +15,32 @@ import {
     trigger
 } from '@angular/animations';
 
+export const detailsFadeIn = [
+    query('.product-details-img-wrapper', style({opacity: 0, transform: 'translateY(-300px)'})),
+    query('.product-details-description, .product-details-close', style({opacity: 0, transform: 'translateX(-100px)'})),
+    query('a.product-details-description', style({opacity: 0, transform: 'translateX(100px)'})),
+    query('.product-details-nav a', style({transform: 'translateX(100%)'})),
+    group([
+        query('.product-details-img-wrapper, .product-details-close', animate('300ms 200ms', style('*'))),
+        query('.product-details-description, .product-details-nav a', [
+            stagger(50, [
+                animate('200ms 200ms', style('*'))
+            ])
+        ])
+    ])
+];
+
+export const detailsFadeOut = [
+    group([
+        query('.product-details-img-wrapper', animate(300, style({opacity: 0, transform: 'translateY(300px)'}))),
+        query('.product-details-description-wrapper', animate(300, style({opacity: 0}))),
+        query('.product-details-close', animate(300, style({opacity: 0}))),
+        query('.product-details-nav a', stagger(50, [
+            animate(250, style({transform: 'translateX(100%)'}))
+        ]))
+    ])
+];
+
 export const productAnimations: {
     readonly routerAnimations: AnimationTriggerMetadata;
     readonly listFadeInOut: AnimationTriggerMetadata;
@@ -40,19 +66,8 @@ export const productAnimations: {
                 animate(100, style({opacity: 0}))
             ], {optional: true}),
             query(':enter', group([
-                query('.product-details-img-wrapper', style({opacity: 0, transform: 'translateY(-300px)'})),
-                query('.product-details-description, .product-details-close', style({opacity: 0, transform: 'translateX(-100px)'})),
-                query('a.product-details-description', style({opacity: 0, transform: 'translateX(100px)'})),
-                query('.product-details-nav a', style({transform: 'translateX(100%)'})),
                 animate('250ms cubic-bezier(.35,0,.25,1)', style({opacity: 1})),
-                group([
-                    query('.product-details-img-wrapper, .product-details-close', animate('300ms 400ms', style('*'))),
-                    query('.product-details-description, .product-details-nav a', [
-                        stagger(50, [
-                            animate('200ms 400ms', style('*'))
-                        ])
-                    ])
-                ])
+                ...detailsFadeIn
             ]), {optional: true})
         ]),
         transition('details => list', [
@@ -61,14 +76,7 @@ export const productAnimations: {
             query(':enter', style({opacity: 0}), {optional: true}),
 
             query(':leave', [
-                group([
-                    query('.product-details-img-wrapper', animate(300, style({opacity: 0, transform: 'translateY(300px)'}))),
-                    query('.product-details-description-wrapper', animate(300, style({opacity: 0}))),
-                    query('.product-details-close', animate(300, style({opacity: 0}))),
-                    query('.product-details-nav a', stagger(50, [
-                        animate(250, style({transform: 'translateX(100%)'}))
-                    ]))
-                ]),
+                ...detailsFadeOut,
                 animate('200ms 100ms', style({opacity: 0}))
             ], {optional: true}),
             query(':enter', [
