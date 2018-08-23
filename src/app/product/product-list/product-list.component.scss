@@ -35,6 +35,8 @@
   cursor: pointer;
 
   .product-list-item {
+    display: flex;
+    align-items: flex-end;
     position: relative;
     margin: 0 1rem;
   }
