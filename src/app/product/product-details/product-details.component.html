@@ -14,13 +14,16 @@
                 <h3 class="product-details-description">{{product.selected.label.sub}}</h3>
                 <h1 class="product-details-description">{{product.selected.label.main}}</h1>
                 <p class="product-details-description">{{product.selected.description}}</p>
-                <a class="product-details-description product-details-btn">Nutrition Info
+                <a class="product-details-description product-details-btn"
+                   tabindex="0">Nutrition Info
                     <div class="cta-round"><i class="fas fa-chevron-right fa-xs"></i></div>
                 </a>
             </div>
         </div>
 
-        <a class="product-details-close product-details-btn" routerLink="/product/list">
+        <a class="product-details-close product-details-btn"
+           tabindex="0"
+           routerLink="/product/list">
             <div class="cta-round">
                 <i class="fas fa-times fa-2x"></i>
             </div>
@@ -31,10 +34,16 @@
         </a>
 
         <div class="product-details-nav">
-            <a class="nav-anchor left" (click)="handleClickOnNav(product.nextId, 'left', $event)">
+            <a class="nav-anchor left"
+               tabindex="0"
+               (keydown.Enter)="handleClickOnNav(product.nextId, 'left', $event)"
+               (click)="handleClickOnNav(product.nextId, 'left', $event)">
                 <i class="fas fa-chevron-left"></i>
             </a>
-            <a class="nav-anchor right" (click)="handleClickOnNav(product.prevId, 'right', $event)">
+            <a class="nav-anchor right"
+               tabindex="0"
+               (keydown.Enter)="handleClickOnNav(product.nextId, 'left', $event)"
+               (click)="handleClickOnNav(product.prevId, 'right', $event)">
                 <i class="fas fa-chevron-right"></i>
             </a>
         </div>
