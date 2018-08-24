@@ -13,6 +13,8 @@ export class ProductService {
     constructor( private http: HttpClient ) {
     }
 
+    public listMoveDistance = 0;
+
     public getProducts(): Observable<Product[]> {
 
         // simulate a process of fetching data from API

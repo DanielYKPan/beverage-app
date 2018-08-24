@@ -1,4 +1,13 @@
-import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+    AfterContentInit,
+    AfterViewInit,
+    ChangeDetectionStrategy,
+    ChangeDetectorRef,
+    Component,
+    ElementRef,
+    OnInit,
+    ViewChild
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { AnimationEvent } from '@angular/animations';
 import { select, Store } from '@ngrx/store';
@@ -7,6 +16,7 @@ import { Observable } from 'rxjs';
 import * as fromProductRoot from '../reducers';
 import { Product } from '../model/product';
 import { productAnimations } from '../animations';
+import { ProductService } from '../product.service';
 
 @Component({
     selector: 'app-product-list',
@@ -21,7 +31,7 @@ import { productAnimations } from '../animations';
         productAnimations.scaleShadow,
     ],
 })
-export class ProductListComponent implements OnInit, AfterViewInit {
+export class ProductListComponent implements OnInit, AfterContentInit, AfterViewInit {
 
     @ViewChild('list') listElm: ElementRef;
     @ViewChild('wrapper') wrapperElm: ElementRef;
@@ -46,13 +56,18 @@ export class ProductListComponent implements OnInit, AfterViewInit {
         return this.isExpanding && !this.isFadingInOut && !this.isDragging;
     }
 
-    constructor( private store: Store<fromProductRoot.State>,
+    constructor( public productService: ProductService,
+                 private store: Store<fromProductRoot.State>,
                  private cdRef: ChangeDetectorRef,
                  private router: Router ) {
     }
 
     public ngOnInit() {
         this.list$ = this.store.pipe(select(fromProductRoot.getAllProducts));
+    }
+
+    public ngAfterContentInit(): void {
+        this.listMoveDistance = this.productService.listMoveDistance;
     }
 
     public ngAfterViewInit(): void {
@@ -123,6 +138,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
             return;
         }
         this.isExpanding = false;
+        this.productService.listMoveDistance = this.listMoveDistance;
         this.router.navigate(['/product/details/', product.id]);
     }
 }

@@ -87,8 +87,8 @@ export const productAnimations: {
                 query('.product-shadow', style({visibility: 'hidden', opacity: 0})),
                 animate('250ms cubic-bezier(.35,0,.25,1)', style({opacity: 1})),
                 query('.product-list-item', [
-                    stagger(50, [
-                        animate(400, style('*'))
+                    stagger(30, [
+                        animate('200ms cubic-bezier(.35,0,.25,1)', style('*'))
                     ])
                 ], {delay: -100}),
                 query('.product-shadow', [
