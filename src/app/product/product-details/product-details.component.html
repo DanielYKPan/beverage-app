@@ -14,10 +14,18 @@
                 <h3 class="product-details-description">{{product.selected.label.sub}}</h3>
                 <h1 class="product-details-description">{{product.selected.label.main}}</h1>
                 <p class="product-details-description">{{product.selected.description}}</p>
-                <a class="product-details-description product-details-btn"
-                   tabindex="0">Nutrition Info
-                    <div class="cta-round"><i class="fas fa-chevron-right fa-xs"></i></div>
-                </a>
+                <div class="product-details-description inform-box">
+                    <h2>Information</h2>
+                    <div class="serving-size">serving size: {{product.selected.size}}</div>
+                    <ul class="minerals-nutrients-list">
+                        <li class="minerals-nutrients-list-item"
+                            [class.sweeteners]="item.key === 'sweeteners'"
+                            *ngFor="let item of product.selected.inform | keyvalue">
+                            <span class="key">{{item.key}}</span>
+                            <span class="value">{{item.value}}</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 

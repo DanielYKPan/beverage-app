@@ -128,17 +128,55 @@
     margin: 0 0 1.5rem;
   }
 
-  a {
-    display: inline-flex;
-    font-size: 1rem;
-    line-height: 1rem;
-    font-weight: 400;
+  .inform-box {
+    width: 19rem;
+    background-color: #1c82ba;
+    color: #ffffff;
+    font-size: .8rem;
+    padding: .7rem;
+    overflow: hidden;
 
-    .cta-round {
-      font-size: 1rem;
-      width: 1.5rem;
-      height: 1.5rem;
-      margin-left: .5rem;
+    h2 {
+      margin: 0 0 .5rem;
+    }
+
+    .serving-size {
+      text-transform: uppercase;
+    }
+
+    .minerals-nutrients-list {
+      list-style: none;
+      margin: 10px 0 0;
+      padding: 10px 0 0;
+      border-top: 10px solid #fff;
+      border-bottom: 10px solid #fff;
+      font-size: .9rem;
+    }
+
+    .minerals-nutrients-list-item {
+      height: 1.8rem;
+      line-height: 1.8rem;
+      border-top: 2px solid #fff;
+
+      &:first-child {
+        border-top: none;
+      }
+
+      .key {
+        text-transform: capitalize;
+        margin-right: 1rem;
+      }
+
+      &.sweeteners {
+        height: 100%;
+        line-height: 1rem;
+        margin-bottom: 1rem;
+        .key {
+          display: block;
+          font-weight: bold;
+          margin: 5px 0;
+        }
+      }
     }
   }
 }
@@ -217,11 +255,6 @@
     p {
       font-size: 1.6rem;
       line-height: 2rem;
-    }
-
-    a {
-      font-size: 1.4rem;
-      line-height: 1.4rem;
     }
   }
 

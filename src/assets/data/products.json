@@ -7,7 +7,18 @@
     },
     "name": "mtn-dew",
     "description": "The original, the one that started it all. MTN DEW® exhilarates and quenches with its one of a kind taste. Also available caffeine free.",
-    "img": "21892-grew-dew-product.png"
+    "img": "21892-grew-dew-product.png",
+    "size": "20 FL OZ (591 ML)",
+    "inform": {
+      "% Juice": "< 1",
+      "caffeine": "91mg",
+      "potassium": "10mg (0% DV)",
+      "phosphorus": "0mg (0% DV)",
+      "sweeteners": [
+        "High Fructose",
+        "Corn Syrup"
+      ]
+    }
   },
   {
     "id": 2,
@@ -17,7 +28,19 @@
     },
     "name": "diet-mtn-dew",
     "description": "All the great, exhilarating taste of MTN DEW® with less calories. Also available caffeine free.",
-    "img": "89833-grew-dew-diet-product.png"
+    "img": "89833-grew-dew-diet-product.png",
+    "size": "20 FL OZ (591 ML)",
+    "inform": {
+      "% Juice": "0",
+      "caffeine": "91mg",
+      "potassium": "130mg (4% DV)",
+      "phosphorus": "0mg (0% DV)",
+      "sweeteners": [
+        "Sucralose",
+        "Aspartame",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 3,
@@ -27,7 +50,19 @@
     },
     "name": "ice-mtn-dew",
     "description": "A clear, refreshing, lemon lime DEW®.",
-    "img": "95559-mtn-dew-ice.png"
+    "img": "95559-mtn-dew-ice.png",
+    "size": "20 FL OZ (591 ML)",
+    "inform": {
+      "% Juice": "1",
+      "caffeine": "91mg",
+      "potassium": "10mg (0% DV)",
+      "phosphorus": "0mg (0% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup",
+        "Sucralose",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 4,
@@ -37,7 +72,19 @@
     },
     "name": "kickstart-original",
     "description": "MTN DEW® KICKSTART™ is returning to its roots. This NEW line of MTN DEW® KICKSTART™ offers the bold taste of original DEW® flavor that you know and love.",
-    "img": "11549-kickstart-original.png"
+    "img": "11549-kickstart-original.png",
+    "size": "16 FL OZ (473 ML)",
+    "inform": {
+      "% Juice": "5",
+      "caffeine": "90mg",
+      "potassium": "55mg (2% DV)",
+      "phosphorus": "142mg (10% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup",
+        "Sucralose",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 5,
@@ -47,7 +94,19 @@
     },
     "name": "kickstart-ultra",
     "description": "MTN DEW® KICKSTART™ is returning to its roots. This NEW line of MTN DEW® KICKSTART™ offers the bold taste of original DEW® flavor with no added sugar.",
-    "img": "95047-kickstart-ultra.png"
+    "img": "95047-kickstart-ultra.png",
+    "size": "16 FL OZ (473 ML)",
+    "inform": {
+      "% Juice": "5",
+      "caffeine": "90mg",
+      "potassium": "80mg (2% DV)",
+      "phosphorus": "143mg (10% DV)",
+      "sweeteners": [
+        "Sucralose",
+        "Aspartame",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 6,
@@ -57,7 +116,18 @@
     },
     "name": "kickstart-orange-citrus",
     "description": "MTN DEW® KICKSTART™ in energizing Orange Citrus. The perfect mix of DEW®, real fruit juice and just the right amount of kick.",
-    "img": "3492-kickstart-orange-citrus.png"
+    "img": "3492-kickstart-orange-citrus.png",
+    "size": "16 FL OZ (473 ML)",
+    "inform": {
+      "% Juice": "5",
+      "caffeine": "92mg",
+      "potassium": "55mg (2% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup",
+        "Sucralose",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 7,
@@ -67,7 +137,18 @@
     },
     "name": "kickstart-black-cherry",
     "description": "The perfect mix of DEW® and fruit juice, plus electrolytes (for taste) and just the right amount of kick to get things going.",
-    "img": "8130-kickstart-black-cherry.png"
+    "img": "8130-kickstart-black-cherry.png",
+    "size": "16 FL OZ (473 ML)",
+    "inform": {
+      "% Juice": "5",
+      "caffeine": "92mg",
+      "potassium": "142mg (2% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup",
+        "Sucralose",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 8,
@@ -77,7 +158,18 @@
     },
     "name": "kickstart-midnight-grape",
     "description": "When the sun goes down, you want to turn up. Now MTN DEW® KICKSTART™ comes in refreshing midnight grape flavor. Its combination of DEW®, juice and caffeine means that when the day ends, you’re just getting started.",
-    "img": "94596-01_KS_MidnightGrape.png"
+    "img": "94596-01_KS_MidnightGrape.png",
+    "size": "16 FL OZ (473 ML)",
+    "inform": {
+      "% Juice": "5",
+      "caffeine": "90mg",
+      "potassium": "142mg (10% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup",
+        "Sucralose",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 9,
@@ -87,7 +179,18 @@
     },
     "name": "kickstart-fruit-punch",
     "description": "MTN DEW® KICKSTART™ in energizing Fruit Punch. The perfect mix of DEW®, real fruit juice and just the right amount of kick.",
-    "img": "7560-kickstart-fruit-punch.png"
+    "img": "7560-kickstart-fruit-punch.png",
+    "size": "16 FL OZ (473 ML)",
+    "inform": {
+      "% Juice": "5",
+      "caffeine": "92mg",
+      "potassium": "50mg (1% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup",
+        "Sucralose",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 10,
@@ -97,7 +200,19 @@
     },
     "name": "kickstart-mango-lime",
     "description": "New MTN DEW® KICKSTART™ Mango Lime flavor blends the great taste of DEW with refreshing fruit juice and caffeine to charge your day.",
-    "img": "33109-mango-lime-products.png"
+    "img": "33109-mango-lime-products.png",
+    "size": "16 FL OZ (473 ML)",
+    "inform": {
+      "% Juice": "5",
+      "caffeine": "90mg",
+      "potassium": "55mg (1% DV)",
+      "phosphorus": "142mg (10% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup",
+        "Sucralose",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 11,
@@ -107,7 +222,18 @@
     },
     "name": "kickstart-pineapple-orange-mango",
     "description": "When it’s time to refuel, grab MTN DEW® KICKSTART™ Pineapple Orange Mango. We mixed the refreshing taste of MOUNTAIN DEW® with real fruit juice, coconut water and just the right amount of kick for a sweet, delicious rush when you need it most.",
-    "img": "5015-pineapple-orange-mango.png"
+    "img": "5015-pineapple-orange-mango.png",
+    "size": "12 FL OZ (355 ML)",
+    "inform": {
+      "% Juice": "10",
+      "caffeine": "68mg",
+      "potassium": "35mg (1% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup",
+        "Sucralose",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 12,
@@ -117,7 +243,18 @@
     },
     "name": "kickstart-blueberry-pom",
     "description": "Experience a mouth-watering blend of blueberry pomegranate flavor, antioxidants, vitamins C + E and the perfect amount of carbonation to pump you up for whatever’s coming next.",
-    "img": "29653-02_KS_BlueberryPom.png"
+    "img": "29653-02_KS_BlueberryPom.png",
+    "size": "12 FL OZ (355 ML)",
+    "inform": {
+      "% Juice": "5",
+      "caffeine": "68mg",
+      "potassium": "45mg (1% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup",
+        "Sucralose",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 13,
@@ -127,7 +264,19 @@
     },
     "name": "kickstart-raspberry-citrus",
     "description": "MTN DEW® KICKSTART™ Raspberry Citrus flavor blends the taste of DEW with fruit juice, coconut water and caffeine for a great tasting way to recharge.",
-    "img": "79239-raspberry-citrus-products.png"
+    "img": "79239-raspberry-citrus-products.png",
+    "size": "12 FL OZ (355 ML)",
+    "inform": {
+      "% Juice": "10",
+      "caffeine": "68mg",
+      "potassium": "35mg (1% DV)",
+      "phosphorus": "106mg (10% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup",
+        "Sucralose",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 14,
@@ -137,7 +286,18 @@
     },
     "name": "kickstart-blood-orange",
     "description": "Experience a mouth-watering burst of blood orange flavor, antioxidants, vitamins C + E and the perfect amount of carbonation to pump you up for whatever’s coming next.",
-    "img": "88610-04_KS_BloodOrange.png"
+    "img": "88610-04_KS_BloodOrange.png",
+    "size": "12 FL OZ (355 ML)",
+    "inform": {
+      "% Juice": "5",
+      "caffeine": "68mg",
+      "potassium": "35mg (1% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup",
+        "Sucralose",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 15,
@@ -147,7 +307,18 @@
     },
     "name": "kickstart-watermelon",
     "description": "Refuel with refreshing MTN DEW® KICKSTART™ in watermelon flavor. Made with real fruit juice and DEW®, it’s a great-tasting kick just when you need it most.",
-    "img": "54589-03_KS_Watermelon.png"
+    "img": "54589-03_KS_Watermelon.png",
+    "size": "12 FL OZ (355 ML)",
+    "inform": {
+      "% Juice": "10",
+      "caffeine": "68mg",
+      "potassium": "35mg (1% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup",
+        "Sucralose",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 16,
@@ -157,7 +328,17 @@
     },
     "name": "mtn-black-label",
     "description": "Introducing MTN DEW® BLACK LABEL®, crafted with dark berry flavor, real sugar, and herbal bitters.",
-    "img": "40713-Black Label_refreshed.png"
+    "img": "40713-Black Label_refreshed.png",
+    "size": "16 FL OZ (473 ML)",
+    "inform": {
+      "% Juice": "0",
+      "caffeine": "83mg",
+      "potassium": "0mg (0% DV)",
+      "phosphorus": "0mg (0% DV)",
+      "sweeteners": [
+        "Sugar"
+      ]
+    }
   },
   {
     "id": 17,
@@ -167,7 +348,19 @@
     },
     "name": "mtn-white-label",
     "description": "Introducing MTN DEW WHITE LABEL™. DEW® made with tropical flavors and infused with citrus bitters that are deliciously refreshing.",
-    "img": "93366-white-label.png"
+    "img": "93366-white-label.png",
+    "size": "16 FL OZ (473 ML)",
+    "inform": {
+      "% Juice": "1",
+      "caffeine": "83mg",
+      "potassium": "5mg (0% DV)",
+      "phosphorus": "10mg (0% DV)",
+      "sweeteners": [
+        "Sugar",
+        "Sucralose",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 18,
@@ -177,7 +370,17 @@
     },
     "name": "mtn-pitch-black",
     "description": "The bold flavor of DEW® with a twist of citrus and dark fruit flavor.",
-    "img": "86457-pitch-black.png"
+    "img": "86457-pitch-black.png",
+    "size": "20 FL OZ (592 ML)",
+    "inform": {
+      "% Juice": "0",
+      "caffeine": "91mg",
+      "potassium": "0mg (0% DV)",
+      "phosphorus": "0mg (0% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup"
+      ]
+    }
   },
   {
     "id": 19,
@@ -187,7 +390,17 @@
     },
     "name": "mtn-dew-live-wire",
     "description": "The exhilarating taste of DEW® sparked with orange flavor. Give your taste buds a jolt.",
-    "img": "4165-mtn-dew-live-wire.png"
+    "img": "4165-mtn-dew-live-wire.png",
+    "size": "20 FL OZ (591 ML)",
+    "inform": {
+      "% Juice": "< 1",
+      "caffeine": "91mg",
+      "potassium": "10mg (0% DV)",
+      "phosphorus": "0mg (0% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup"
+      ]
+    }
   },
   {
     "id": 20,
@@ -197,7 +410,19 @@
     },
     "name": "mtn-dew-voltage",
     "description": "The exhilarating taste of DEW® charged with ginseng and raspberry citrus flavor. Lightning in a bottle.",
-    "img": "8415-mtn-dew-voltage.png"
+    "img": "8415-mtn-dew-voltage.png",
+    "size": "20 FL OZ (591 ML)",
+    "inform": {
+      "% Juice": "5",
+      "caffeine": "90mg",
+      "potassium": "55mg (1% DV)",
+      "phosphorus": "142mg (10% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup",
+        "Sucralose",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 21,
@@ -207,27 +432,58 @@
     },
     "name": "mtn-dew-white-out",
     "description": "The exhilarating taste of DEW® with a blast of smooth citrus flavor. Built by DEW fans, for DEW fans.",
-    "img": "9520-mtn-dew-white-out.png"
+    "img": "9520-mtn-dew-white-out.png",
+    "size": "16 FL OZ (473 ML)",
+    "inform": {
+      "% Juice": "0",
+      "caffeine": "91mg",
+      "potassium": "0mg (0% DV)",
+      "phosphorus": "0mg (0% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup"
+      ]
+    }
   },
   {
     "id": 22,
     "label": {
       "sub": "MTN DEW®",
-      "main": "CODE OUT™"
+      "main": "CODE RED™"
     },
-    "name": "mtn-dew-code-out",
+    "name": "mtn-dew-code-red",
     "description": "The exhilarating taste of DEW® with a rush of cherry flavor. It’ll have you seeing red.",
-    "img": "1199-mtn-dew-code-red.png"
+    "img": "1199-mtn-dew-code-red.png",
+    "size": "20 FL OZ (591 ML)",
+    "inform": {
+      "% Juice": "< 1",
+      "caffeine": "91mg",
+      "potassium": "15mg (0% DV)",
+      "phosphorus": "89mg (8% DV)",
+      "sweeteners": [
+        "High Fructose Corn Syrup"
+      ]
+    }
   },
   {
     "id": 23,
     "label": {
       "sub": "DIET MTN DEW®",
-      "main": "CODE OUT®"
+      "main": "CODE RED®"
     },
-    "name": "mtn-dew-diet-code-out",
+    "name": "mtn-dew-diet-code-red",
     "description": "The great taste and cherry rush of MTN DEW® CODE RED® with less calories.",
-    "img": "1727-diet-mtn-dew-code-red.png"
+    "img": "1727-diet-mtn-dew-code-red.png",
+    "size": "20 FL OZ (591 ML)",
+    "inform": {
+      "% Juice": "0",
+      "caffeine": "90mg",
+      "potassium": "120mg (3% DV)",
+      "phosphorus": "0mg (0% DV)",
+      "sweeteners": [
+        "Aspartame",
+        "Acesulfame Potassium"
+      ]
+    }
   },
   {
     "id": 24,
@@ -237,6 +493,17 @@
     },
     "name": "mtn-dew-glass-bottles",
     "description": "Introducing the new MTN DEW® long-neck glass bottle. Real sugar. Real cool.",
-    "img": "3718-mtn-dew-glass-bottles.png"
+    "img": "3718-mtn-dew-glass-bottles.png",
+    "size": "20 FL OZ (591 ML)",
+    "inform": {
+      "% Juice": "< 1",
+      "caffeine": "91mg",
+      "potassium": "10mg (0% DV)",
+      "phosphorus": "0mg (0% DV)",
+      "sweeteners": [
+        "High Fructose",
+        "Corn Syrup"
+      ]
+    }
   }
 ]

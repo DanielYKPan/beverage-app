@@ -60,7 +60,7 @@ export const productAnimations: {
                     opacity: 0,
                     transform: 'translateX(-100px)'
                 })),
-                query('a.product-details-description', style({opacity: 0, transform: 'translateX(100px)'})),
+                query('.inform-box', style({opacity: 0, transform: 'translateX(0px)'})),
                 query('.product-details-nav a', style({transform: 'translateX(100%)'})),
                 animate('250ms cubic-bezier(.35,0,.25,1)', style({opacity: 1})),
                 group([
