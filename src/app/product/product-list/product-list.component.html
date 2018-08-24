@@ -21,10 +21,11 @@
             [@moveProduct]="getMoveProductStat(i)"
             [class.product-list-item-left]="i < hoverProductIndex"
             [class.product-list-item-right]="i > hoverProductIndex">
-            <a class="product-anchor"
+            <a class="product-anchor" tabindex="0"
                [class.scaled]="listCanAccordion && i === hoverProductIndex"
                [@scaleProduct]="listCanAccordion && i === hoverProductIndex"
                (tap)="handleClickOnProductAnchor(item)"
+               (keydown)="handleKeydownOnProductAnchor(item, i, $event)"
                (mouseenter)="handleMouseEnterOnCard(i, $event)"
                (mouseleave)="handleMouseLeaveOnCard(i, $event)">
                 <img class="product-img"

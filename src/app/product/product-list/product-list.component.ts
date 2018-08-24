@@ -9,7 +9,6 @@ import {
     ViewChild
 } from '@angular/core';
 import { Router } from '@angular/router';
-import { AnimationEvent } from '@angular/animations';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
@@ -17,6 +16,8 @@ import * as fromProductRoot from '../reducers';
 import { Product } from '../model/product';
 import { productAnimations } from '../animations';
 import { ProductService } from '../product.service';
+
+const product_width = 112;
 
 @Component({
     selector: 'app-product-list',
@@ -140,5 +141,17 @@ export class ProductListComponent implements OnInit, AfterContentInit, AfterView
         this.isExpanding = false;
         this.productService.listMoveDistance = this.listMoveDistance;
         this.router.navigate(['/product/details/', product.id]);
+    }
+
+    public handleKeydownOnProductAnchor( product: Product, index: number, event: KeyboardEvent ) {
+        const key = event.key;
+        if (key === 'Tab') {
+            this.hoverProductIndex = index;
+            this.isExpanding = true;
+            this.setListMoveDistance(index * product_width * -1);
+            this.cdRef.markForCheck();
+        } else if (key === 'Enter') {
+            this.handleClickOnProductAnchor(product);
+        }
     }
 }
