@@ -7,11 +7,14 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { TileComponent } from './home/tile/tile.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
+        TileComponent,
     ],
     imports: [
         BrowserModule,
@@ -19,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
         HttpClientModule,
         AppRoutingModule,
         CoreModule,
+        LazyLoadImageModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

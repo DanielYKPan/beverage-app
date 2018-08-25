@@ -1,0 +1,47 @@
+.tile-anchor {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f4f5f5 url(/assets/img/texture-light.jpg) repeat;
+  overflow: hidden;
+}
+
+.tile-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 70%;
+
+  .tile-img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+  }
+}
+
+.tile-title {
+  padding: 1.5rem;
+  box-sizing: border-box;
+  text-transform: uppercase;
+
+  h3 {
+    margin: 0 0 3px;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    color: #3cd52e;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #2a2b2c;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: -.03rem;
+  }
+}

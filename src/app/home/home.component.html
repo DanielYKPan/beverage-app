@@ -1,3 +1,22 @@
-<p>
-  home works!
-</p>
+<div class="home-wrapper">
+    <div class="home-banner" #banner>
+        <div class="home-banner-backdrop" [lazyLoad]="'/assets/img/11162-dtd.jpg'"></div>
+        <div class="home-banner-video" [style.height.px]="banner.offsetWidth * 9 / 16">
+            <video class="original-video" preload="auto" loop autoplay="autoplay" muted>
+                <source src="/assets/videos/42386-Snow_Loop_041018_v1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="home-banner-content">
+            <h2>Red Gerard x MTN DEW<sup>®</sup></h2>
+            <h1>DO THE DEW<sup>®</sup></h1>
+            <a>Watch Video<span class="cta-inline"><i class="fas fa-chevron-right fa-xs"></i></span></a>
+        </div>
+    </div>
+    <div class="tile-list-wrapper">
+        <ul class="tile-list" [style.width.px]="tileWidth * tiles.length">
+            <li class="tile" *ngFor="let tile of tiles">
+                <app-tile [tile]="tile"></app-tile>
+            </li>
+        </ul>
+    </div>
+</div>
