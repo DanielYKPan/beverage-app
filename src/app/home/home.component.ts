@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
     @ViewChild('listWrapper') listWrapperElm: ElementRef;
 
-    public readonly tileWidth = 320;
+    public readonly tileWidth = 380;
     public state = false;
     public offsetBottom = 0;
     public listLeft = 0;

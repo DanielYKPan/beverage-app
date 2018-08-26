@@ -1,9 +1,15 @@
-<a class="tile-anchor">
+<a class="tile-anchor"
+   [class.on]="on"
+   (mouseenter)="handleMouseEnterOnAnchor($event)"
+   (mouseleave)="handleMouseLeaveOnAnchor($event)">
     <div class="tile-img-wrapper">
         <img class="tile-img" [src]="'/assets/img/content/' + tile.img" alt="tile.cta">
     </div>
     <div class="tile-title">
         <h3>{{tile.title.type}}</h3>
         <h2>{{tile.title.content}}</h2>
+    </div>
+    <div class="tile-cta">
+        <h3>{{tile.cta}}</h3>
     </div>
 </a>

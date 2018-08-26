@@ -1,8 +1,11 @@
+$cta-height: 4rem;
+
 .tile-anchor {
   display: block;
+  position: relative;
   width: 100%;
   height: 100%;
-  background: #f4f5f5 url(/assets/img/texture-light.jpg) repeat;
+  background: #f4f5f5;
   overflow: hidden;
   cursor: pointer;
 }
@@ -11,6 +14,7 @@
   position: relative;
   width: 100%;
   height: 70%;
+  overflow: hidden;
 
   .tile-img {
     display: block;
@@ -21,6 +25,7 @@
     height: 100%;
     object-fit: cover;
     opacity: 1;
+    transition: transform 100ms cubic-bezier(.35,0,.25,1);
   }
 }
 
@@ -28,6 +33,9 @@
   padding: 1.5rem;
   box-sizing: border-box;
   text-transform: uppercase;
+  height: 30%;
+  transition: transform 300ms cubic-bezier(.35,0,.25,1);
+  background: #f4f5f5 url(/assets/img/texture-light.jpg) repeat;
 
   h3 {
     margin: 0 0 3px;
@@ -44,5 +52,37 @@
     font-weight: 600;
     font-style: normal;
     letter-spacing: -.03rem;
+  }
+}
+
+.tile-cta {
+  width: 100%;
+  height: $cta-height;
+  line-height: $cta-height;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  background-color: #5abc49;
+  color: #f4f5f5;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(#{$cta-height});
+  transition: transform 300ms 50ms cubic-bezier(.35,0,.25,1);
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.tile-anchor.on {
+  .tile-img {
+    transform: scale(1.2);
+  }
+
+  .tile-title {
+    transform: translateY(-#{$cta-height});
+  }
+
+  .tile-cta {
+    transform: translateY(0);
   }
 }
