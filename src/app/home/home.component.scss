@@ -3,6 +3,7 @@
 $tile-width: 320px;
 $tile-height: 30rem;
 $banner-bottom: 6rem;
+$tile-translate: 5rem;
 
 .home-wrapper {
   position: relative;
@@ -103,10 +104,12 @@ $banner-bottom: 6rem;
 
 .tile-list-wrapper {
   width: 100%;
+  overflow: hidden;
   overflow-x: auto;
 }
 
 .tile-list {
+  position: relative;
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -116,7 +119,7 @@ $banner-bottom: 6rem;
   .tile {
     width: $tile-width;
     height: $tile-height;
-    padding: 5px;
+    padding: 0 5px;
     box-sizing: border-box;
   }
 }
@@ -193,7 +196,25 @@ $banner-bottom: 6rem;
 
   .tile-list-wrapper {
     position: absolute;
+    opacity: .4;
     bottom: calc(-#{$tile-height} + #{$banner-bottom - 1rem});
     overflow-x: hidden;
+
+    .tile-list {
+      transition: left 300ms linear;
+    }
+
+    &.on {
+      opacity: 1;
+      bottom: 0;
+
+      .tile-list {
+        transform: translateY(calc(100% - #{$banner-bottom - 1rem}));
+      }
+
+      .tile {
+        transform: translateY(calc((100% - #{$banner-bottom - 1rem}) * -1));
+      }
+    }
   }
 }
