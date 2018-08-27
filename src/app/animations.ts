@@ -1,7 +1,7 @@
 /**
  * animations
  */
-import { animate, AnimationTriggerMetadata, group, query, stagger, style, transition, trigger } from '@angular/animations';
+import { animate, animateChild, AnimationTriggerMetadata, group, query, stagger, style, transition, trigger } from '@angular/animations';
 import { detailsFadeOut, listFadeOut } from './product/animations';
 
 export const appAnimations: {
@@ -9,7 +9,7 @@ export const appAnimations: {
     readonly tileListWrapperAnimations: AnimationTriggerMetadata;
 } = {
     routerAnimations: trigger('routerAnimations', [
-        transition('product => home', [
+        transition('product => *', [
             query(':enter, :leave', style({position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}), {optional: true}),
             query(':leave', style({zIndex: 2, opacity: 1}), {optional: true}),
             query(':enter', style({opacity: 0}), {optional: true}),
@@ -22,7 +22,40 @@ export const appAnimations: {
             query(':enter', [
                 animate('250ms cubic-bezier(.35,0,.25,1)', style({opacity: 1})),
             ], {optional: true})
-        ])
+        ]),
+        transition('* => product', [
+            query(':enter, :leave', style({position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}), {optional: true}),
+            query(':leave', style({zIndex: 2, opacity: 1}), {optional: true}),
+            query(':enter', style({opacity: 0}), {optional: true}),
+
+            query(':leave', [
+                animate('200ms cubic-bezier(.35,0,.25,1)', style({opacity: 0}))
+            ], {optional: true}),
+            query(':enter', [
+                animate('250ms cubic-bezier(.35,0,.25,1)', style({opacity: 1})),
+                query('@routerAnimations', animateChild()),
+            ], {optional: true})
+        ]),
+
+        transition('home <=> sports, home <=> vr, sports <=> vr', [
+            query(':enter, :leave', style({position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}), {optional: true}),
+            query(':leave', style({zIndex: 2}), {optional: true}),
+            query(':enter', [
+                query('.banner', style({transform: 'translateX({{offsetEnter}})'})),
+                query('.tile-list-wrapper', style({opacity: 0, transform: 'translateY(100%)'}))
+            ]),
+
+            group([
+                query(':leave', group([
+                    query('.banner', animate('500ms', style({transform: 'translateX({{offsetLeave}})'}))),
+                    query('.tile-list-wrapper', animate('250ms', style({opacity: 0, transform: 'translateY(100%)'}))),
+                ])),
+                query(':enter', group([
+                    query('.banner', animate('500ms', style({transform: 'translateX(0px)'}))),
+                    query('.tile-list-wrapper', animate('250ms 250ms', style({opacity: 1, transform: 'translateY(0px)'})))
+                ])),
+            ])
+        ], {params: {offsetLeave: '-100%', offsetEnter: '100%'}})
     ]),
 
     tileListWrapperAnimations: trigger('tileListWrapperAnimations', [

@@ -260,10 +260,10 @@ const routeData = {
 
 
 const routes: Routes = [
-    {path: '', component: HomeComponent, data: {animation: 'home', ...routeData.home}},
-    {path: 'sports', component: SportsComponent, data: {animation: 'sports', ...routeData.sports}},
-    {path: 'vr', component: VrComponent, data: {animation: 'vr', ...routeData.vr}},
-    {path: 'product', loadChildren: 'src/app/product/product.module#ProductModule', data: {animation: 'product'}},
+    {path: '', component: HomeComponent, data: {animation: 'home', index: 0, ...routeData.home}},
+    {path: 'sports', component: SportsComponent, data: {animation: 'sports', index: 1, ...routeData.sports}},
+    {path: 'vr', component: VrComponent, data: {animation: 'vr', index: 2, ...routeData.vr}},
+    {path: 'product', loadChildren: 'src/app/product/product.module#ProductModule', data: {animation: 'product', index: 3}},
 ];
 
 @NgModule({
