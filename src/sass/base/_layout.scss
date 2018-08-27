@@ -5,19 +5,19 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+  padding: 0 0 $header-height;
+  box-sizing: border-box;
 }
 
 .layout-main {
   position: relative;
-  padding: 0 0 $header-height;
   height: 100%;
-  box-sizing: border-box;
   overflow: hidden;
   background-color: #1d1d1f;
 }
 
 @media #{$small-up} {
-  .layout-main {
+  .layout-wrapper {
     padding: $header-height 0 0;
   }
 }
