@@ -1,15 +1,15 @@
 <div class="home-wrapper">
     <div class="home-banner" #banner>
-        <div class="home-banner-backdrop" [lazyLoad]="'/assets/img/11162-dtd.jpg'"></div>
+        <div class="home-banner-backdrop" [lazyLoad]="'/assets/img/' + backdrop.img"></div>
         <div class="home-banner-video" [style.height.px]="banner.offsetWidth * 9 / 16">
             <video class="original-video" preload="auto" loop autoplay="autoplay" muted>
-                <source src="/assets/videos/42386-Snow_Loop_041018_v1.mp4" type="video/mp4">
+                <source [src]="'/assets/videos/' + backdrop.video" type="video/mp4">
             </video>
         </div>
         <div class="home-banner-content">
-            <h2>Red Gerard x MTN DEW<sup>®</sup></h2>
-            <h1>DO THE DEW<sup>®</sup></h1>
-            <a>Watch Video<span class="cta-inline"><i class="fas fa-chevron-right fa-xs"></i></span></a>
+            <h2 [innerHtml]="title.sub"></h2>
+            <h1 [innerHtml]="title.main"></h1>
+            <a>{{title.link.name}}<span class="cta-inline"><i class="fas fa-chevron-right fa-xs"></i></span></a>
         </div>
     </div>
     <div class="tile-list-wrapper"

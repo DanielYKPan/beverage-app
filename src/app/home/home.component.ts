@@ -1,4 +1,6 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { appAnimations } from '../animations';
 
 @Component({
@@ -10,7 +12,7 @@ import { appAnimations } from '../animations';
         appAnimations.tileListWrapperAnimations,
     ]
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
     @ViewChild('listWrapper') listWrapperElm: ElementRef;
 
@@ -19,94 +21,29 @@ export class HomeComponent implements OnInit, AfterViewInit {
     public offsetBottom = 0;
     public listLeft = 0;
 
-    public tiles = [
-        {
-            title: {
-                type: 'product',
-                content: 'MTN DEW® BLACK LABEL®'
-            },
-            img: '66447-thumb06_blacklabel.jpg',
-            cta: 'Launch Website',
-            page: 'latest'
-        },
-        {
-            title: {
-                type: 'product',
-                content: 'Russell Westbrook Cans'
-            },
-            img: '59031-87800-pod_tile_3.jpg',
-            cta: 'Launch Website',
-            page: 'latest'
-        },
-        {
-            title: {
-                type: 'product',
-                content: 'MTN DEW® Kickstart™'
-            },
-            img: '6888-thumb05_kickstart.jpg',
-            cta: 'Launch Website',
-            page: 'latest'
-        },
-        {
-            title: {
-                type: 'product',
-                content: 'MTN DEW® DEWshine™'
-            },
-            img: '6404-thumb04_dewshine.jpg',
-            cta: 'Launch Website',
-            page: 'latest'
-        },
-        {
-            title: {
-                type: 'product',
-                content: 'MTN DEW® Baja Blast®'
-            },
-            img: '6605-thumb03_bajablast.jpg',
-            cta: 'Launch Website',
-            page: 'latest'
-        },
-        {
-            title: {
-                type: 'Green Label® Films',
-                content: 'We Are Blood'
-            },
-            img: '7993-thumb01_weareblood.jpg',
-            cta: 'Read More',
-            page: 'latest'
-        },
-        {
-            title: {
-                type: 'game',
-                content: 'FUEL UP FOR BATTLE'
-            },
-            img: '87800-pod_tile.jpg',
-            cta: 'See Rewards',
-            page: 'latest'
-        },
-        {
-            title: {
-                type: 'VR Experiences',
-                content: 'Dew® VR Snow'
-            },
-            img: '5358-thumb01_vrsnow.jpg',
-            cta: 'Read More',
-            page: 'latest'
-        },
-        {
-            title: {
-                type: 'VR Experiences',
-                content: 'Dew® VR Skate'
-            },
-            img: '5457-thumb02_vrskate.jpg',
-            cta: 'Read More',
-            page: 'latest'
-        }
-    ];
+    public tiles: any[];
+    public title: any;
+    public backdrop: any;
+    public routeDataSub: Subscription;
 
-    constructor() {
+    constructor( private route: ActivatedRoute ) {
     }
 
     public ngOnInit() {
+        this.routeDataSub = this.route.data.subscribe(( res ) => {
+            this.tiles = res.tiles;
+            this.title = res.title;
+            this.backdrop = res.backdrop;
+        });
+    }
+
+    public ngAfterViewInit(): void {
+        const listWrapperRect = this.listWrapperElm.nativeElement.getBoundingClientRect();
+        this.offsetBottom = window.innerHeight - listWrapperRect.top - listWrapperRect.height;
+    }
+
+    public ngOnDestroy(): void {
+        this.routeDataSub.unsubscribe();
     }
 
     public handleMouseEnterOnListWrapper( event: any ) {
@@ -117,11 +54,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     public handleMouseLeaveOnListWrapper( event: any ) {
         this.state = false;
         event.preventDefault();
-    }
-
-    public ngAfterViewInit(): void {
-        const listWrapperRect = this.listWrapperElm.nativeElement.getBoundingClientRect();
-        this.offsetBottom = window.innerHeight - listWrapperRect.top - listWrapperRect.height;
     }
 
     public handleMouseMoveOnListWrapper( event: MouseEvent ): void {
