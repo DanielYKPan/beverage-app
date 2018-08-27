@@ -7,11 +7,15 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SportsComponent } from './sports/sports.component';
+import { VrComponent } from './vr/vr.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
+        SportsComponent,
+        VrComponent,
     ],
     imports: [
         BrowserModule,

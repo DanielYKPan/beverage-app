@@ -3,12 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-vr',
+    templateUrl: './vr.component.html',
+    styleUrls: ['./vr.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class VrComponent implements OnInit, OnDestroy {
 
     public tiles: any[];
     public title: any;
