@@ -1,16 +1,4 @@
 <div class="home-wrapper">
-    <div class="home-banner" #banner>
-        <div class="home-banner-backdrop" [lazyLoad]="'/assets/img/' + backdrop.img"></div>
-        <div class="home-banner-video" [style.height.px]="banner.offsetWidth * 9 / 16">
-            <video class="original-video" preload="auto" loop autoplay="autoplay" muted>
-                <source [src]="'/assets/videos/' + backdrop.video" type="video/mp4">
-            </video>
-        </div>
-        <div class="home-banner-content">
-            <h2 [innerHtml]="title.sub"></h2>
-            <h1 [innerHtml]="title.main"></h1>
-            <a>{{title.link.name}}<span class="cta-inline"><i class="fas fa-chevron-right fa-xs"></i></span></a>
-        </div>
-    </div>
+    <app-banner [backdrop]="backdrop" [title]="title"></app-banner>
     <app-tile-list [tiles]="tiles"></app-tile-list>
 </div>

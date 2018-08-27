@@ -1,0 +1,13 @@
+<div class="banner" #banner>
+    <div class="banner-backdrop" [lazyLoad]="'/assets/img/' + backdrop.img"></div>
+    <div class="banner-video" [style.height.px]="banner.offsetWidth * 9 / 16">
+        <video class="original-video" preload="auto" loop autoplay="autoplay" muted>
+            <source [src]="'/assets/videos/' + backdrop.video" type="video/mp4">
+        </video>
+    </div>
+    <div class="banner-content">
+        <h2 [innerHtml]="title.sub"></h2>
+        <h1 [innerHtml]="title.main"></h1>
+        <a>{{title.link.name}}<span class="cta-inline"><i class="fas fa-chevron-right fa-xs"></i></span></a>
+    </div>
+</div>
