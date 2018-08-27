@@ -3,7 +3,6 @@
 $tile-width: 380px;
 $tile-height: 30rem;
 $banner-bottom: 6rem;
-$tile-translate: 5rem;
 
 .home-wrapper {
   position: relative;
@@ -102,28 +101,6 @@ $tile-translate: 5rem;
   }
 }
 
-.tile-list-wrapper {
-  width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
-}
-
-.tile-list {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  margin: 0;
-  padding: 5px 0;
-
-  .tile {
-    width: $tile-width;
-    height: $tile-height;
-    padding: 0 5px;
-    box-sizing: border-box;
-  }
-}
-
 @media #{$small-up} {
   .home-banner {
     justify-content: center;
@@ -191,30 +168,6 @@ $tile-translate: 5rem;
       top: 0;
       height: 100%;
       width: 100%;
-    }
-  }
-
-  .tile-list-wrapper {
-    position: absolute;
-    opacity: .4;
-    bottom: calc(-#{$tile-height} + #{$banner-bottom - 1rem});
-    overflow-x: hidden;
-
-    .tile-list {
-      transition: left 300ms linear;
-    }
-
-    &.on {
-      opacity: 1;
-      bottom: 0;
-
-      .tile-list {
-        transform: translateY(calc(100% - #{$banner-bottom - 1rem}));
-      }
-
-      .tile {
-        transform: translateY(calc((100% - #{$banner-bottom - 1rem}) * -1));
-      }
     }
   }
 }

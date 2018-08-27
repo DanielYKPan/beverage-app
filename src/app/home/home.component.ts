@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { appAnimations } from '../animations';
@@ -12,14 +12,7 @@ import { appAnimations } from '../animations';
         appAnimations.tileListWrapperAnimations,
     ]
 })
-export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
-
-    @ViewChild('listWrapper') listWrapperElm: ElementRef;
-
-    public readonly tileWidth = 380;
-    public state = false;
-    public offsetBottom = 0;
-    public listLeft = 0;
+export class HomeComponent implements OnInit, OnDestroy {
 
     public tiles: any[];
     public title: any;
@@ -37,32 +30,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         });
     }
 
-    public ngAfterViewInit(): void {
-        const listWrapperRect = this.listWrapperElm.nativeElement.getBoundingClientRect();
-        this.offsetBottom = window.innerHeight - listWrapperRect.top - listWrapperRect.height;
-    }
-
     public ngOnDestroy(): void {
         this.routeDataSub.unsubscribe();
-    }
-
-    public handleMouseEnterOnListWrapper( event: any ) {
-        this.state = true;
-        event.preventDefault();
-    }
-
-    public handleMouseLeaveOnListWrapper( event: any ) {
-        this.state = false;
-        event.preventDefault();
-    }
-
-    public handleMouseMoveOnListWrapper( event: MouseEvent ): void {
-        const pageX = event.pageX;
-        const currentProgress = pageX / window.innerWidth;
-        const fromProgress = .1;
-        const toProgress = 1 - fromProgress;
-        const progressDiff = toProgress - fromProgress;
-        const scrollPos = (Math.max(fromProgress, Math.min(toProgress, currentProgress)) - fromProgress) / progressDiff;
-        this.listLeft = scrollPos * (this.tileWidth * this.tiles.length - window.innerWidth) * -1;
     }
 }

@@ -1,0 +1,14 @@
+<div class="tile-list-wrapper" [class.expanded]="state"
+     [@tileListWrapperAnimations]="{value: state, params: {offsetMinus: offsetBottom, offsetPlus: offsetBottom * -1}}"
+     (mouseenter)="handleMouseEnterOnListWrapper($event)"
+     (mouseleave)="handleMouseLeaveOnListWrapper($event)"
+     (mousemove)="handleMouseMoveOnListWrapper($event)"
+     #listWrapper>
+    <ul class="tile-list"
+        [style.left.px]="listLeft"
+        [style.width.px]="tileWidth * tiles.length">
+        <li class="tile" *ngFor="let tile of tiles">
+            <app-tile [tile]="tile"></app-tile>
+        </li>
+    </ul>
+</div>

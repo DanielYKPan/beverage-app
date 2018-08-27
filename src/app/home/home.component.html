@@ -12,19 +12,5 @@
             <a>{{title.link.name}}<span class="cta-inline"><i class="fas fa-chevron-right fa-xs"></i></span></a>
         </div>
     </div>
-    <div class="tile-list-wrapper"
-         [class.on]="state"
-         [@tileListWrapperAnimations]="{value: state, params: {offsetMinus: offsetBottom, offsetPlus: offsetBottom * -1}}"
-         (mouseenter)="handleMouseEnterOnListWrapper($event)"
-         (mouseleave)="handleMouseLeaveOnListWrapper($event)"
-         (mousemove)="handleMouseMoveOnListWrapper($event)"
-         #listWrapper>
-        <ul class="tile-list"
-            [style.left.px]="listLeft"
-            [style.width.px]="tileWidth * tiles.length">
-            <li class="tile" *ngFor="let tile of tiles">
-                <app-tile [tile]="tile"></app-tile>
-            </li>
-        </ul>
-    </div>
+    <app-tile-list [tiles]="tiles"></app-tile-list>
 </div>
