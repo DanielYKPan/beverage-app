@@ -6,8 +6,8 @@
         <img class="tile-img" [src]="'/assets/img/content/' + tile.img" alt="tile.cta">
     </div>
     <div class="tile-title">
-        <h3>{{tile.title.type}}</h3>
-        <h2>{{tile.title.content}}</h2>
+        <h3 [innerHtml]="tile.title.type"></h3>
+        <h2 [innerHtml]="tile.title.content"></h2>
     </div>
     <div class="tile-cta">
         <h3>{{tile.cta}}</h3>

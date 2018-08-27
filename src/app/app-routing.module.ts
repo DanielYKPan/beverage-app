@@ -12,85 +12,67 @@ const routeData = {
         tiles: [
             {
                 title: {
-                    type: 'product',
-                    content: 'MTN DEW® BLACK LABEL®'
+                    type: 'products',
+                    content: 'BUY MTN DEW<sup>®</sup>'
                 },
-                img: '66447-thumb06_blacklabel.jpg',
+                img: 'home/82794-green_dew.jpg',
+                cta: 'Shop Now',
+                page: 'latest'
+            },
+            {
+                title: {
+                    type: 'MTN DEW <sup>®</sup> PRESENTS',
+                    content: 'Dewey Ryder'
+                },
+                img: 'home/70453-dewey-ryder-pod.jpg',
+                cta: 'See Profile',
+                page: 'latest'
+            },
+            {
+                title: {
+                    type: 'Products',
+                    content: 'MTN DEW<sup>®</sup> Kickstart<sup>™</sup>'
+                },
+                img: 'home/89270-2018-kickstart-pod.jpg',
+                cta: 'Learn More',
+                page: 'latest'
+            },
+            {
+                title: {
+                    type: 'Programs',
+                    content: 'MTN DEW<sup>®</sup> x NBA<sup>®</sup>'
+                },
+                img: 'home/69032-dew-nba.jpg',
                 cta: 'Launch Website',
                 page: 'latest'
             },
             {
                 title: {
-                    type: 'product',
-                    content: 'Russell Westbrook Cans'
+                    type: 'Products',
+                    content: 'MTN DEW ICE<sup>™</sup>'
                 },
-                img: '59031-87800-pod_tile_3.jpg',
+                img: 'home/45631-thumbnail_v2.jpg',
                 cta: 'Launch Website',
                 page: 'latest'
             },
             {
                 title: {
-                    type: 'product',
-                    content: 'MTN DEW® Kickstart™'
+                    type: 'Products',
+                    content: 'MTN DEW<sup>®</sup> LABEL SERIES'
                 },
-                img: '6888-thumb05_kickstart.jpg',
+                img: 'home/44573-label-series-2018.jpg',
                 cta: 'Launch Website',
                 page: 'latest'
             },
             {
                 title: {
-                    type: 'product',
-                    content: 'MTN DEW® DEWshine™'
+                    type: 'MTN DEW<sup>®</sup> Presents',
+                    content: 'GREEN LABEL'
                 },
-                img: '6404-thumb04_dewshine.jpg',
+                img: 'home/17274-green-label-pod.jpg',
                 cta: 'Launch Website',
                 page: 'latest'
             },
-            {
-                title: {
-                    type: 'product',
-                    content: 'MTN DEW® Baja Blast®'
-                },
-                img: '6605-thumb03_bajablast.jpg',
-                cta: 'Launch Website',
-                page: 'latest'
-            },
-            {
-                title: {
-                    type: 'Green Label® Films',
-                    content: 'We Are Blood'
-                },
-                img: '7993-thumb01_weareblood.jpg',
-                cta: 'Read More',
-                page: 'latest'
-            },
-            {
-                title: {
-                    type: 'game',
-                    content: 'FUEL UP FOR BATTLE'
-                },
-                img: '87800-pod_tile.jpg',
-                cta: 'See Rewards',
-                page: 'latest'
-            },
-            {
-                title: {
-                    type: 'VR Experiences',
-                    content: 'Dew® VR Snow'
-                },
-                img: '5358-thumb01_vrsnow.jpg',
-                cta: 'Read More',
-                page: 'latest'
-            },
-            {
-                title: {
-                    type: 'VR Experiences',
-                    content: 'Dew® VR Skate'
-                },
-                img: '5457-thumb02_vrskate.jpg',
-                cta: 'Read More',
-                page: 'latest'
-            }
         ],
         backdrop: {
             img: '11162-dtd.jpg',

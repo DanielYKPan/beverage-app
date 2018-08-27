@@ -1,14 +1,1 @@
-@import "../../sass/base/breakPoints";
 
-.home-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-}
-
-@media #{$medium-up} {
-  .home-wrapper {
-    overflow-y: hidden;
-  }
-}
